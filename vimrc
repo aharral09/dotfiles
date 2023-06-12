@@ -75,10 +75,10 @@ set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 
 " Plugin code goes here.
 call plug#begin('~/.vim/plugged')
-
+Plug 'tpope/vim-fugitive'
 Plug 'gruvbox-community/gruvbox'
-Plug 'instant-markdown/vim-instant-markdown'
-
+Plug 'preservim/nerdtree'
+Plug 'xolox/vim-misc'
 call plug#end()
 
 " Set color scheme
