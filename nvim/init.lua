@@ -1,0 +1,8 @@
+require("aharral.core.colorscheme")
+require("aharral.core.options")
+require("aharral.core.keymaps")
+require("aharral.plugins-setup")
+require("aharral.plugins.nvim-tree")
+require("aharral.plugins.lualine")
+require("aharral.plugins.telescope")
+require("aharral.plugins.nvterm")
