@@ -50,9 +50,63 @@ return packer.startup(function(use)
   use("nvim-lua/plenary.nvim")
 
   -- fuzzy finding w/ telescope
-  use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
-  use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- fuzzy finder
+  use({"nvim-telescope/telescope-fzf-native.nvim", run = "make"}) -- dependency for better sorting performance
+  use({"nvim-telescope/telescope.nvim", branch = "0.1.x"}) -- fuzzy finder
 
+  -- treesitter
+  use("nvim-treesitter/nvim-treesitter", {run = ":TSUpdate"})
+
+  -- markdown preview
+  use {'iamcco/markdown-preview.nvim'}
+
+  -- buftabline
+  use {
+    "jose-elias-alvarez/buftabline.nvim",
+    requires = {"kyazdani42/nvim-web-devicons"}, -- optional!
+    config = function() require("buftabline").setup {} end
+  } 
+
+  -- autocomplete
+  use("hrsh7th/nvim-cmp")
+  use("hrsh7th/cmp-buffer")
+  use("hrsh7th/cmp-path")
+
+  -- snippets
+  use("L3MON4D3/LuaSnip")
+  use("saadparwaiz1/cmp_luasnip")
+  use("rafamadriz/friendly-snippets")
+  
+  -- start page
+  use {
+    'goolord/alpha-nvim',
+    config = function ()
+        local alpha = require'alpha'
+        local dashboard = require'alpha.themes.dashboard'
+        dashboard.section.header.val = {
+            [[                               __                ]],
+            [[  ___     ___    ___   __  __ /\_\    ___ ___    ]],
+            [[ / _ `\  / __`\ / __`\/\ \/\ \\/\ \  / __` __`\  ]],
+            [[/\ \/\ \/\  __//\ \_\ \ \ \_/ |\ \ \/\ \/\ \/\ \ ]],
+            [[\ \_\ \_\ \____\ \____/\ \___/  \ \_\ \_\ \_\ \_\]],
+            [[ \/_/\/_/\/____/\/___/  \/__/    \/_/\/_/\/_/\/_/]],
+        }
+        dashboard.section.buttons.val = {
+            dashboard.button( "e", "📄  New file" , ":ene <BAR> startinsert <CR>"),
+            dashboard.button( "Ctrl-n", "🗂 File Explorer" , ":NvimTreeToggle<CR>"),
+            dashboard.button( "Space-ff", "🔎 Find Files", ":Telescope find_files<CR>"),
+            dashboard.button( "Space-fs", "🔎 Find Text", ":Telescope live_grep<CR>"),
+            dashboard.button( "q", "❌  Quit NVIM" , ":qa<CR>"),
+
+
+        }
+ 
+        dashboard.config.opts.noautocmd = true
+ 
+        vim.cmd[[autocmd User AlphaReady echo 'ready']]
+ 
+        alpha.setup(dashboard.config)                                                                                     
+    end
+  }
 
   if packer_bootstrap then
     require("packer").sync()
