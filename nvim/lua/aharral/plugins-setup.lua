@@ -37,8 +37,10 @@ return packer.startup(function(use)
   -- nvterm
   use ("NvChad/nvterm")
   
-  -- gruvbox
+  -- colorschemes - update core/colorschemes
   use("ellisonleao/gruvbox.nvim")
+  use{ "catppuccin/nvim", as = "catppuccin" }
+  use 'tanvirtin/monokai.nvim'
 
   -- file explorer
   use("nvim-tree/nvim-tree.lua")
@@ -59,13 +61,28 @@ return packer.startup(function(use)
   -- markdown preview
   use {'iamcco/markdown-preview.nvim'}
 
-  -- buftabline
-  use {
-    "jose-elias-alvarez/buftabline.nvim",
-    requires = {"kyazdani42/nvim-web-devicons"}, -- optional!
-    config = function() require("buftabline").setup {} end
-  } 
+ use {
+	  'VonHeikemen/lsp-zero.nvim',
+	  branch = 'v1.x',
+	  requires = {
+		  -- LSP Support
+		  {'neovim/nvim-lspconfig'},
+		  {'williamboman/mason.nvim'},
+		  {'williamboman/mason-lspconfig.nvim'},
 
+		  -- Autocompletion
+		  {'hrsh7th/nvim-cmp'},
+		  {'hrsh7th/cmp-buffer'},
+		  {'hrsh7th/cmp-path'},
+		  {'saadparwaiz1/cmp_luasnip'},
+		  {'hrsh7th/cmp-nvim-lsp'},
+		  {'hrsh7th/cmp-nvim-lua'},
+
+		  -- Snippets
+		  {'L3MON4D3/LuaSnip'},
+		  {'rafamadriz/friendly-snippets'},
+	  }
+  }
   -- autocomplete
   use("hrsh7th/nvim-cmp")
   use("hrsh7th/cmp-buffer")
