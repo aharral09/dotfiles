@@ -10,8 +10,7 @@ keymap.set("i", "jj", "<ESC>")
 keymap.set("i", "<C-s>", ":w<CR>")
 keymap.set("n", "<C-s>", ":w<CR>")
 
--- buffers
-keymap.set("n", "<leader>to", ":enew<CR>")
+
 
 -- window management
 keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
@@ -31,7 +30,7 @@ keymap.set("n", "<C-l>", "<C-w>l")
 keymap.set("n", "<leader>z", ":set wrap!<CR>")
 
 -- NvimTreeToggle
-keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>")
+keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 
 -- telescope
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
