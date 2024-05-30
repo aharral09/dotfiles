@@ -4,6 +4,16 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+#### ALIASES
+alias ff='fastfetch'
+alias vi='nvim'
+# alias gs='git status'
+# alias gd='git diff'
+# alias ga='git add'
+# alias gc='git commit -m'
+# alias gp='git push'
+# alias gy='git pull'
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
