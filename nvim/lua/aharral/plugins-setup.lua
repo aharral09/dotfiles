@@ -37,7 +37,7 @@ return packer.startup(function(use)
 
   -- nvterm
   use('NvChad/nvterm')
-  
+
   -- colorschemes - update core/colorschemes
   use('ellisonleao/gruvbox.nvim')
 
@@ -52,15 +52,21 @@ return packer.startup(function(use)
 
   -- fuzzy finding w/ telescope
   use({"nvim-telescope/telescope-fzf-native.nvim", run = "make"}) -- dependency for better sorting performance
-  use({"nvim-telescope/telescope.nvim", branch = "0.1.x"}) -- fuzzy finder
+  use({"nvim-telescope/telescope.nvim"}) -- fuzzy finder
 
   -- treesitter
   use("nvim-treesitter/nvim-treesitter", {run = ":TSUpdate"})
 
   -- markdown preview
-  use ('iamcco/markdown-preview.nvim')
+  use('iamcco/markdown-preview.nvim')
 
- use {
+  -- markdown 
+  use('tpope/vim-markdown')
+
+  -- link following
+  use('alexpearce/nvim-follow-markdown-links', {'do', ':UpdateRemotePlugins'})
+
+  use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v1.x',
 	  requires = {
@@ -82,7 +88,7 @@ return packer.startup(function(use)
   use("hrsh7th/nvim-cmp")
   use("hrsh7th/cmp-buffer")
   use("hrsh7th/cmp-path")
-  
+
   -- start page
   use {
     'goolord/alpha-nvim',

@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/aharral/.cache/nvim/packer_hererocks/2.1.1716656478/share/lua/5.1/?.lua;/home/aharral/.cache/nvim/packer_hererocks/2.1.1716656478/share/lua/5.1/?/init.lua;/home/aharral/.cache/nvim/packer_hererocks/2.1.1716656478/lib/luarocks/rocks-5.1/?.lua;/home/aharral/.cache/nvim/packer_hererocks/2.1.1716656478/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/aharral/.cache/nvim/packer_hererocks/2.1.1716656478/lib/lua/5.1/?.so"
+local package_path_str = "/Users/aharral/.cache/nvim/packer_hererocks/2.1.1716656478/share/lua/5.1/?.lua;/Users/aharral/.cache/nvim/packer_hererocks/2.1.1716656478/share/lua/5.1/?/init.lua;/Users/aharral/.cache/nvim/packer_hererocks/2.1.1716656478/lib/luarocks/rocks-5.1/?.lua;/Users/aharral/.cache/nvim/packer_hererocks/2.1.1716656478/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/aharral/.cache/nvim/packer_hererocks/2.1.1716656478/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -74,135 +74,115 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  LuaSnip = {
-    loaded = true,
-    path = "/home/aharral/.local/share/nvim/site/pack/packer/start/LuaSnip",
-    url = "https://github.com/L3MON4D3/LuaSnip"
-  },
   ["alpha-nvim"] = {
-    config = { "\27LJ\2\n‹\a\0\0\t\0\31\00186\0\0\0'\2\1\0B\0\2\0026\1\0\0'\3\2\0B\1\2\0029\2\3\0019\2\4\0025\3\6\0=\3\5\0029\2\3\0019\2\a\0024\3\6\0009\4\b\1'\6\t\0'\a\n\0'\b\v\0B\4\4\2>\4\1\0039\4\b\1'\6\f\0'\a\r\0'\b\14\0B\4\4\2>\4\2\0039\4\b\1'\6\15\0'\a\16\0'\b\17\0B\4\4\2>\4\3\0039\4\b\1'\6\18\0'\a\19\0'\b\20\0B\4\4\2>\4\4\0039\4\b\1'\6\21\0'\a\22\0'\b\23\0B\4\4\0?\4\0\0=\3\5\0029\2\24\0019\2\25\2+\3\2\0=\3\26\0026\2\27\0009\2\28\2'\4\29\0B\2\2\0019\2\30\0009\4\24\1B\2\2\1K\0\1\0\nsetup)autocmd User AlphaReady echo 'ready'\bcmd\bvim\14noautocmd\topts\vconfig\f:qa<CR>\19âŒ  Quit NVIM\6q\29:Telescope live_grep<CR>\19ğŸ” Find Text\rSpace-fs\30:Telescope find_files<CR>\20ğŸ” Find Files\rSpace-ff\24:NvimTreeToggle<CR>\23ğŸ—‚ File Explorer\fSpace-e :ene <BAR> startinsert <CR>\19ğŸ“„  New file\vCtrl-n\vbutton\fbuttons\1\a\0\0006                               __                6  ___     ___    ___   __  __ /\\_\\    ___ ___    6 / _ `\\  / __`\\ / __`\\/\\ \\/\\ \\\\/\\ \\  / __` __`\\  6/\\ \\/\\ \\/\\  __//\\ \\_\\ \\ \\ \\_/ |\\ \\ \\/\\ \\/\\ \\/\\ \\ 6\\ \\_\\ \\_\\ \\____\\ \\____/\\ \\___/  \\ \\_\\ \\_\\ \\_\\ \\_\\6 \\/_/\\/_/\\/____/\\/___/  \\/__/    \\/_/\\/_/\\/_/\\/_/\bval\vheader\fsection\27alpha.themes.dashboard\nalpha\frequire\v€€À™\4\0" },
+    config = { "\27LJ\2\n‰\a\0\0\t\0\31\00186\0\0\0'\2\1\0B\0\2\0026\1\0\0'\3\2\0B\1\2\0029\2\3\0019\2\4\0025\3\6\0=\3\5\0029\2\3\0019\2\a\0024\3\6\0009\4\b\1'\6\t\0'\a\n\0'\b\v\0B\4\4\2>\4\1\0039\4\b\1'\6\f\0'\a\r\0'\b\14\0B\4\4\2>\4\2\0039\4\b\1'\6\15\0'\a\16\0'\b\17\0B\4\4\2>\4\3\0039\4\b\1'\6\18\0'\a\19\0'\b\20\0B\4\4\2>\4\4\0039\4\b\1'\6\21\0'\a\22\0'\b\23\0B\4\4\0?\4\0\0=\3\5\0029\2\24\0019\2\25\2+\3\2\0=\3\26\0026\2\27\0009\2\28\2'\4\29\0B\2\2\0019\2\30\0009\4\24\1B\2\2\1K\0\1\0\nsetup)autocmd User AlphaReady echo 'ready'\bcmd\bvim\14noautocmd\topts\vconfig\f:qa<CR>\18âŒ Quit NVIM\6q\29:Telescope live_grep<CR>\19ğŸ” Find Text\rSpace-fs\30:Telescope find_files<CR>\20ğŸ” Find Files\rSpace-ff\24:NvimTreeToggle<CR>\23ğŸ—‚ File Explorer\fSpace-e :ene <BAR> startinsert <CR>\18ğŸ“„ New file\vCtrl-n\vbutton\fbuttons\1\a\0\0006                               __                6  ___     ___    ___   __  __ /\\_\\    ___ ___    6 / _ `\\  / __`\\ / __`\\/\\ \\/\\ \\\\/\\ \\  / __` __`\\  6/\\ \\/\\ \\/\\  __//\\ \\_\\ \\ \\ \\_/ |\\ \\ \\/\\ \\/\\ \\/\\ \\ 6\\ \\_\\ \\_\\ \\____\\ \\____/\\ \\___/  \\ \\_\\ \\_\\ \\_\\ \\_\\6 \\/_/\\/_/\\/____/\\/___/  \\/__/    \\/_/\\/_/\\/_/\\/_/\bval\vheader\fsection\27alpha.themes.dashboard\nalpha\frequire\v€€À™\4\0" },
     loaded = true,
-    path = "/home/aharral/.local/share/nvim/site/pack/packer/start/alpha-nvim",
+    path = "/Users/aharral/.local/share/nvim/site/pack/packer/start/alpha-nvim",
     url = "https://github.com/goolord/alpha-nvim"
-  },
-  catppuccin = {
-    loaded = true,
-    path = "/home/aharral/.local/share/nvim/site/pack/packer/start/catppuccin",
-    url = "https://github.com/catppuccin/nvim"
   },
   ["cmp-buffer"] = {
     loaded = true,
-    path = "/home/aharral/.local/share/nvim/site/pack/packer/start/cmp-buffer",
+    path = "/Users/aharral/.local/share/nvim/site/pack/packer/start/cmp-buffer",
     url = "https://github.com/hrsh7th/cmp-buffer"
   },
   ["cmp-nvim-lsp"] = {
     loaded = true,
-    path = "/home/aharral/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
+    path = "/Users/aharral/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
   ["cmp-nvim-lua"] = {
     loaded = true,
-    path = "/home/aharral/.local/share/nvim/site/pack/packer/start/cmp-nvim-lua",
+    path = "/Users/aharral/.local/share/nvim/site/pack/packer/start/cmp-nvim-lua",
     url = "https://github.com/hrsh7th/cmp-nvim-lua"
   },
   ["cmp-path"] = {
     loaded = true,
-    path = "/home/aharral/.local/share/nvim/site/pack/packer/start/cmp-path",
+    path = "/Users/aharral/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
   },
   cmp_luasnip = {
     loaded = true,
-    path = "/home/aharral/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
+    path = "/Users/aharral/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
-  },
-  ["friendly-snippets"] = {
-    loaded = true,
-    path = "/home/aharral/.local/share/nvim/site/pack/packer/start/friendly-snippets",
-    url = "https://github.com/rafamadriz/friendly-snippets"
   },
   ["gruvbox.nvim"] = {
     loaded = true,
-    path = "/home/aharral/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
+    path = "/Users/aharral/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
     url = "https://github.com/ellisonleao/gruvbox.nvim"
   },
   ["lsp-zero.nvim"] = {
     loaded = true,
-    path = "/home/aharral/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
+    path = "/Users/aharral/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
     url = "https://github.com/VonHeikemen/lsp-zero.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
-    path = "/home/aharral/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    path = "/Users/aharral/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   ["markdown-preview.nvim"] = {
     loaded = true,
-    path = "/home/aharral/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
+    path = "/Users/aharral/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
     url = "https://github.com/iamcco/markdown-preview.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
-    path = "/home/aharral/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
+    path = "/Users/aharral/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
     url = "https://github.com/williamboman/mason-lspconfig.nvim"
   },
   ["mason.nvim"] = {
     loaded = true,
-    path = "/home/aharral/.local/share/nvim/site/pack/packer/start/mason.nvim",
+    path = "/Users/aharral/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
-  },
-  ["monokai.nvim"] = {
-    loaded = true,
-    path = "/home/aharral/.local/share/nvim/site/pack/packer/start/monokai.nvim",
-    url = "https://github.com/tanvirtin/monokai.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,
-    path = "/home/aharral/.local/share/nvim/site/pack/packer/start/nvim-cmp",
+    path = "/Users/aharral/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
-    path = "/home/aharral/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    path = "/Users/aharral/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
-    path = "/home/aharral/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+    path = "/Users/aharral/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
     url = "https://github.com/nvim-tree/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
     loaded = true,
-    path = "/home/aharral/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    path = "/Users/aharral/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
-    path = "/home/aharral/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    path = "/Users/aharral/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
   nvterm = {
     loaded = true,
-    path = "/home/aharral/.local/share/nvim/site/pack/packer/start/nvterm",
+    path = "/Users/aharral/.local/share/nvim/site/pack/packer/start/nvterm",
     url = "https://github.com/NvChad/nvterm"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "/home/aharral/.local/share/nvim/site/pack/packer/start/packer.nvim",
+    path = "/Users/aharral/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
   ["plenary.nvim"] = {
     loaded = true,
-    path = "/home/aharral/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    path = "/Users/aharral/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,
-    path = "/home/aharral/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
+    path = "/Users/aharral/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
     url = "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
-    path = "/home/aharral/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    path = "/Users/aharral/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   }
 }
@@ -210,7 +190,7 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 -- Config for: alpha-nvim
 time([[Config for alpha-nvim]], true)
-try_loadstring("\27LJ\2\n‹\a\0\0\t\0\31\00186\0\0\0'\2\1\0B\0\2\0026\1\0\0'\3\2\0B\1\2\0029\2\3\0019\2\4\0025\3\6\0=\3\5\0029\2\3\0019\2\a\0024\3\6\0009\4\b\1'\6\t\0'\a\n\0'\b\v\0B\4\4\2>\4\1\0039\4\b\1'\6\f\0'\a\r\0'\b\14\0B\4\4\2>\4\2\0039\4\b\1'\6\15\0'\a\16\0'\b\17\0B\4\4\2>\4\3\0039\4\b\1'\6\18\0'\a\19\0'\b\20\0B\4\4\2>\4\4\0039\4\b\1'\6\21\0'\a\22\0'\b\23\0B\4\4\0?\4\0\0=\3\5\0029\2\24\0019\2\25\2+\3\2\0=\3\26\0026\2\27\0009\2\28\2'\4\29\0B\2\2\0019\2\30\0009\4\24\1B\2\2\1K\0\1\0\nsetup)autocmd User AlphaReady echo 'ready'\bcmd\bvim\14noautocmd\topts\vconfig\f:qa<CR>\19âŒ  Quit NVIM\6q\29:Telescope live_grep<CR>\19ğŸ” Find Text\rSpace-fs\30:Telescope find_files<CR>\20ğŸ” Find Files\rSpace-ff\24:NvimTreeToggle<CR>\23ğŸ—‚ File Explorer\fSpace-e :ene <BAR> startinsert <CR>\19ğŸ“„  New file\vCtrl-n\vbutton\fbuttons\1\a\0\0006                               __                6  ___     ___    ___   __  __ /\\_\\    ___ ___    6 / _ `\\  / __`\\ / __`\\/\\ \\/\\ \\\\/\\ \\  / __` __`\\  6/\\ \\/\\ \\/\\  __//\\ \\_\\ \\ \\ \\_/ |\\ \\ \\/\\ \\/\\ \\/\\ \\ 6\\ \\_\\ \\_\\ \\____\\ \\____/\\ \\___/  \\ \\_\\ \\_\\ \\_\\ \\_\\6 \\/_/\\/_/\\/____/\\/___/  \\/__/    \\/_/\\/_/\\/_/\\/_/\bval\vheader\fsection\27alpha.themes.dashboard\nalpha\frequire\v€€À™\4\0", "config", "alpha-nvim")
+try_loadstring("\27LJ\2\n‰\a\0\0\t\0\31\00186\0\0\0'\2\1\0B\0\2\0026\1\0\0'\3\2\0B\1\2\0029\2\3\0019\2\4\0025\3\6\0=\3\5\0029\2\3\0019\2\a\0024\3\6\0009\4\b\1'\6\t\0'\a\n\0'\b\v\0B\4\4\2>\4\1\0039\4\b\1'\6\f\0'\a\r\0'\b\14\0B\4\4\2>\4\2\0039\4\b\1'\6\15\0'\a\16\0'\b\17\0B\4\4\2>\4\3\0039\4\b\1'\6\18\0'\a\19\0'\b\20\0B\4\4\2>\4\4\0039\4\b\1'\6\21\0'\a\22\0'\b\23\0B\4\4\0?\4\0\0=\3\5\0029\2\24\0019\2\25\2+\3\2\0=\3\26\0026\2\27\0009\2\28\2'\4\29\0B\2\2\0019\2\30\0009\4\24\1B\2\2\1K\0\1\0\nsetup)autocmd User AlphaReady echo 'ready'\bcmd\bvim\14noautocmd\topts\vconfig\f:qa<CR>\18âŒ Quit NVIM\6q\29:Telescope live_grep<CR>\19ğŸ” Find Text\rSpace-fs\30:Telescope find_files<CR>\20ğŸ” Find Files\rSpace-ff\24:NvimTreeToggle<CR>\23ğŸ—‚ File Explorer\fSpace-e :ene <BAR> startinsert <CR>\18ğŸ“„ New file\vCtrl-n\vbutton\fbuttons\1\a\0\0006                               __                6  ___     ___    ___   __  __ /\\_\\    ___ ___    6 / _ `\\  / __`\\ / __`\\/\\ \\/\\ \\\\/\\ \\  / __` __`\\  6/\\ \\/\\ \\/\\  __//\\ \\_\\ \\ \\ \\_/ |\\ \\ \\/\\ \\/\\ \\/\\ \\ 6\\ \\_\\ \\_\\ \\____\\ \\____/\\ \\___/  \\ \\_\\ \\_\\ \\_\\ \\_\\6 \\/_/\\/_/\\/____/\\/___/  \\/__/    \\/_/\\/_/\\/_/\\/_/\bval\vheader\fsection\27alpha.themes.dashboard\nalpha\frequire\v€€À™\4\0", "config", "alpha-nvim")
 time([[Config for alpha-nvim]], false)
 
 _G._packer.inside_compile = false
