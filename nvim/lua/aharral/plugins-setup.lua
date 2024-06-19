@@ -98,11 +98,11 @@ return packer.startup(function(use)
             [[ \/_/\/_/\/____/\/___/  \/__/    \/_/\/_/\/_/\/_/]],
         }
         dashboard.section.buttons.val = {
-            dashboard.button( "Ctrl-n", "📄  New file" , ":ene <BAR> startinsert <CR>"),
+            dashboard.button( "Ctrl-n", "📄 New file" , ":ene <BAR> startinsert <CR>"),
             dashboard.button( "Space-e", "🗂 File Explorer" , ":NvimTreeToggle<CR>"),
             dashboard.button( "Space-ff", "🔎 Find Files", ":Telescope find_files<CR>"),
             dashboard.button( "Space-fs", "🔎 Find Text", ":Telescope live_grep<CR>"),
-            dashboard.button( "q", "❌  Quit NVIM" , ":qa<CR>"),
+            dashboard.button( "q", "❌ Quit NVIM" , ":qa<CR>"),
         }
         dashboard.config.opts.noautocmd = true
         vim.cmd[[autocmd User AlphaReady echo 'ready']]
