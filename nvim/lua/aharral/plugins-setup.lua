@@ -58,7 +58,7 @@ return packer.startup(function(use)
   use("nvim-treesitter/nvim-treesitter", {run = ":TSUpdate"})
 
   -- markdown preview
-  use {'iamcco/markdown-preview.nvim'}
+  use ('iamcco/markdown-preview.nvim')
 
  use {
 	  'VonHeikemen/lsp-zero.nvim',
@@ -76,21 +76,12 @@ return packer.startup(function(use)
 		  {'saadparwaiz1/cmp_luasnip'},
 		  {'hrsh7th/cmp-nvim-lsp'},
 		  {'hrsh7th/cmp-nvim-lua'},
-
-		  -- Snippets
-		  {'L3MON4D3/LuaSnip'},
-		  {'rafamadriz/friendly-snippets'},
 	  }
   }
   -- autocomplete
   use("hrsh7th/nvim-cmp")
   use("hrsh7th/cmp-buffer")
   use("hrsh7th/cmp-path")
-
-  -- snippets
-  use("L3MON4D3/LuaSnip")
-  use("saadparwaiz1/cmp_luasnip")
-  use("rafamadriz/friendly-snippets")
   
   -- start page
   use {
