@@ -10,8 +10,6 @@ keymap.set("i", "jj", "<ESC>")
 keymap.set("i", "<C-s>", ":w<CR>")
 keymap.set("n", "<C-s>", ":w<CR>")
 
-
-
 -- window management
 keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
 keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally
@@ -41,6 +39,3 @@ keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available 
 
 -- markdown preview
 keymap.set("n", "<leader>mp", ":MarkdownPreview<CR>")
-
--- F5 key to run python
-keymap.set("n", "<F5>", "<Esc>:w<CR>:!clear;python3 %<CR>")
