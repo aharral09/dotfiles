@@ -28,28 +28,27 @@ end
 
 -- add list of plugins to install
 return packer.startup(function(use)
+
   -- packer can manage itself
-  use("wbthomason/packer.nvim")
+  use('wbthomason/packer.nvim')
 
   -- statusline
-  use("nvim-lualine/lualine.nvim")
+  use('nvim-lualine/lualine.nvim')
 
   -- nvterm
-  use ("NvChad/nvterm")
+  use('NvChad/nvterm')
   
   -- colorschemes - update core/colorschemes
-  use("ellisonleao/gruvbox.nvim")
-  use{ "catppuccin/nvim", as = "catppuccin" }
-  use 'tanvirtin/monokai.nvim'
+  use('ellisonleao/gruvbox.nvim')
 
   -- file explorer
-  use("nvim-tree/nvim-tree.lua")
+  use('nvim-tree/nvim-tree.lua')
 
   -- VSCode Icons
-  use("kyazdani42/nvim-web-devicons")
+  use('kyazdani42/nvim-web-devicons')
 
   -- plenary (required for telescope)
-  use("nvim-lua/plenary.nvim")
+  use('nvim-lua/plenary.nvim')
 
   -- fuzzy finding w/ telescope
   use({"nvim-telescope/telescope-fzf-native.nvim", run = "make"}) -- dependency for better sorting performance
@@ -113,14 +112,9 @@ return packer.startup(function(use)
             dashboard.button( "Space-ff", "🔎 Find Files", ":Telescope find_files<CR>"),
             dashboard.button( "Space-fs", "🔎 Find Text", ":Telescope live_grep<CR>"),
             dashboard.button( "q", "❌  Quit NVIM" , ":qa<CR>"),
-
-
         }
- 
         dashboard.config.opts.noautocmd = true
- 
         vim.cmd[[autocmd User AlphaReady echo 'ready']]
- 
         alpha.setup(dashboard.config)                                                                                     
     end
   }
