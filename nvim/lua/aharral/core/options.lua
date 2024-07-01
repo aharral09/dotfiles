@@ -53,4 +53,4 @@ opt.showmode = false
 opt.mouse = "a"
 
 -- spell check
-opt.spell = true
+-- opt.spell = false

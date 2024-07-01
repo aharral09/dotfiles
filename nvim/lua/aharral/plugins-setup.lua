@@ -60,6 +60,14 @@ return packer.startup(function(use)
   -- markdown preview
   use('iamcco/markdown-preview.nvim')
 
+  -- markview
+  use {
+	  'OXY2DEV/markview.nvim',
+	  requires = {
+		  {'nvim-tree/nvim-web-devicons'},
+	  }
+  }
+
   -- markdown 
   use('tpope/vim-markdown')
 
