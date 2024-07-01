@@ -39,5 +39,3 @@ keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available 
 
 -- markdown preview
 keymap.set("n", "<leader>mp", ":MarkdownPreview<CR>")
-
--- follow links
