@@ -10,6 +10,9 @@ keymap.set("i", "jj", "<ESC>")
 keymap.set("i", "<C-s>", ":w<CR>")
 keymap.set("n", "<C-s>", ":w<CR>")
 
+-- New file
+keymap.set("n", "<C-n>", ":ene <BAR> startinsert <CR>")
+
 -- window management
 keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
 keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally
