@@ -65,7 +65,11 @@ return packer.startup(function(use)
 	  'OXY2DEV/markview.nvim',
 	  requires = {
 		  {'nvim-tree/nvim-web-devicons'},
-	  }
+	  },
+
+    config = function ()
+      require("markview").setup()
+    end
   }
 
   -- markdown 

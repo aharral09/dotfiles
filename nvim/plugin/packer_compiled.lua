@@ -125,6 +125,12 @@ _G.packer_plugins = {
     path = "/Users/aharral/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
     url = "https://github.com/iamcco/markdown-preview.nvim"
   },
+  ["markview.nvim"] = {
+    config = { "\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rmarkview\frequire\0" },
+    loaded = true,
+    path = "/Users/aharral/.local/share/nvim/site/pack/packer/start/markview.nvim",
+    url = "https://github.com/OXY2DEV/markview.nvim"
+  },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
     path = "/Users/aharral/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
@@ -139,6 +145,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/aharral/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
+  },
+  ["nvim-follow-markdown-links"] = {
+    loaded = true,
+    path = "/Users/aharral/.local/share/nvim/site/pack/packer/start/nvim-follow-markdown-links",
+    url = "https://github.com/alexpearce/nvim-follow-markdown-links"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -184,6 +195,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/aharral/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["vim-markdown"] = {
+    loaded = true,
+    path = "/Users/aharral/.local/share/nvim/site/pack/packer/start/vim-markdown",
+    url = "https://github.com/tpope/vim-markdown"
   }
 }
 
@@ -192,6 +208,10 @@ time([[Defining packer_plugins]], false)
 time([[Config for alpha-nvim]], true)
 try_loadstring("\27LJ\2\n‰\a\0\0\t\0\31\00186\0\0\0'\2\1\0B\0\2\0026\1\0\0'\3\2\0B\1\2\0029\2\3\0019\2\4\0025\3\6\0=\3\5\0029\2\3\0019\2\a\0024\3\6\0009\4\b\1'\6\t\0'\a\n\0'\b\v\0B\4\4\2>\4\1\0039\4\b\1'\6\f\0'\a\r\0'\b\14\0B\4\4\2>\4\2\0039\4\b\1'\6\15\0'\a\16\0'\b\17\0B\4\4\2>\4\3\0039\4\b\1'\6\18\0'\a\19\0'\b\20\0B\4\4\2>\4\4\0039\4\b\1'\6\21\0'\a\22\0'\b\23\0B\4\4\0?\4\0\0=\3\5\0029\2\24\0019\2\25\2+\3\2\0=\3\26\0026\2\27\0009\2\28\2'\4\29\0B\2\2\0019\2\30\0009\4\24\1B\2\2\1K\0\1\0\nsetup)autocmd User AlphaReady echo 'ready'\bcmd\bvim\14noautocmd\topts\vconfig\f:qa<CR>\18âŒ Quit NVIM\6q\29:Telescope live_grep<CR>\19ğŸ” Find Text\rSpace-fs\30:Telescope find_files<CR>\20ğŸ” Find Files\rSpace-ff\24:NvimTreeToggle<CR>\23ğŸ—‚ File Explorer\fSpace-e :ene <BAR> startinsert <CR>\18ğŸ“„ New file\vCtrl-n\vbutton\fbuttons\1\a\0\0006                               __                6  ___     ___    ___   __  __ /\\_\\    ___ ___    6 / _ `\\  / __`\\ / __`\\/\\ \\/\\ \\\\/\\ \\  / __` __`\\  6/\\ \\/\\ \\/\\  __//\\ \\_\\ \\ \\ \\_/ |\\ \\ \\/\\ \\/\\ \\/\\ \\ 6\\ \\_\\ \\_\\ \\____\\ \\____/\\ \\___/  \\ \\_\\ \\_\\ \\_\\ \\_\\6 \\/_/\\/_/\\/____/\\/___/  \\/__/    \\/_/\\/_/\\/_/\\/_/\bval\vheader\fsection\27alpha.themes.dashboard\nalpha\frequire\v€€À™\4\0", "config", "alpha-nvim")
 time([[Config for alpha-nvim]], false)
+-- Config for: markview.nvim
+time([[Config for markview.nvim]], true)
+try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rmarkview\frequire\0", "config", "markview.nvim")
+time([[Config for markview.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

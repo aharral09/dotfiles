@@ -1,0 +1,9 @@
+{
+  "LazyVim": { "branch": "main", "commit": "78cf6ee024cbf6a17dc8406555eb131994cd8b63" },
+  "gruvbox.nvim": { "branch": "main", "commit": "a7cacf59418a6fe52da3d022bfd76a8caf34dc8d" },
+  "lazy.nvim": { "branch": "main", "commit": "a9d7ade203b3f3ee3058c082c62afdf8e4bcb416" },
+  "markview.nvim": { "branch": "main", "commit": "f60219dce7283192d549f21847fcf8537bf6d260" },
+  "nvim-tree.lua": { "branch": "master", "commit": "2086e564c4d23fea714e8a6d63b881e551af2f41" },
+  "nvim-treesitter": { "branch": "master", "commit": "ffd7725102f47e7391d7a5e7621d178689602a52" },
+  "nvim-web-devicons": { "branch": "master", "commit": "c0cfc1738361b5da1cd0a962dd6f774cc444f856" }
+}
