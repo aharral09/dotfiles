@@ -1,4 +1,4 @@
--- leader key to space
+-- leader key to spacekeykey
 vim.g.mapleader = " "
 
 local keymap = vim.keymap
@@ -41,4 +41,18 @@ keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
 
 -- markdown preview
-keymap.set("n", "<leader>mp", ":MarkdownPreview<CR>")
+keymap.set("n", "<leader>md", ":MarkdownPreview<CR>")
+
+-- pdf export
+keymap.set("n", "<leader>ex", ":! pandoc -f markdown-implicit_figures -t pdf % > ~/Documents/$(basename % .md).pdf")
+
+-- tabs
+keymap.set("n", "<leader>bn", ":BufferNext<CR>")
+keymap.set("n", "<leader>bp", ":BufferPrevious<CR>")
+
+keymap.set("n", "<leader>bmn", ":BufferMoveNext<CR>")
+keymap.set("n", "<leader>bmp", ":BufferMovePrevious<CR>")
+
+
+
+

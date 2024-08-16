@@ -32,6 +32,14 @@ return packer.startup(function(use)
   -- packer can manage itself
   use('wbthomason/packer.nvim')
 
+  use {
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    config = function()
+        require("nvim-autopairs").setup {}
+    end
+  }
+
   -- statusline
   use('nvim-lualine/lualine.nvim')
 
@@ -47,6 +55,11 @@ return packer.startup(function(use)
   -- VSCode Icons
   use('kyazdani42/nvim-web-devicons')
 
+  -- Tabs
+  use('lewis6991/gitsigns.nvim')
+  use('romgrk/barbar.nvim')
+
+
   -- plenary (required for telescope)
   use('nvim-lua/plenary.nvim')
 
@@ -60,15 +73,19 @@ return packer.startup(function(use)
   -- markdown preview
   use('iamcco/markdown-preview.nvim')
 
-  -- markview
-  use {
-	  'OXY2DEV/markview.nvim',
-	  requires = {'nvim-tree/nvim-web-devicons'},
-
-    config = function ()
-      require("markview").setup()
-    end
-  }
+  -- markdown
+  use({
+    'MeanderingProgrammer/markdown.nvim',
+    as = 'render-markdown', -- Only needed if you have another plugin named markdown.nvim
+    after = { 'nvim-treesitter' },
+    requires = { 'echasnovski/mini.nvim', opt = true }, -- if you use the mini.nvim suite
+    -- requires = { 'echasnovski/mini.icons', opt = true }, -- if you use standalone mini plugins
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }, -- if you prefer nvim-web-devicons
+    config = function()
+        require('render-markdown').setup({})
+        require('render-markdown').enable()
+    end,
+  })
 
   -- markdown 
   use('tpope/vim-markdown')
@@ -84,7 +101,6 @@ return packer.startup(function(use)
 		  {'neovim/nvim-lspconfig'},
 		  {'williamboman/mason.nvim'},
 		  {'williamboman/mason-lspconfig.nvim'},
-
 		  -- Autocompletion
 		  {'hrsh7th/nvim-cmp'},
 		  {'hrsh7th/cmp-buffer'},
@@ -106,12 +122,13 @@ return packer.startup(function(use)
         local alpha = require'alpha'
         local dashboard = require'alpha.themes.dashboard'
         dashboard.section.header.val = {
-            [[                               __                ]],
-            [[  ___     ___    ___   __  __ /\_\    ___ ___    ]],
-            [[ / _ `\  / __`\ / __`\/\ \/\ \\/\ \  / __` __`\  ]],
-            [[/\ \/\ \/\  __//\ \_\ \ \ \_/ |\ \ \/\ \/\ \/\ \ ]],
-            [[\ \_\ \_\ \____\ \____/\ \___/  \ \_\ \_\ \_\ \_\]],
-            [[ \/_/\/_/\/____/\/___/  \/__/    \/_/\/_/\/_/\/_/]],
+            [[ ░▒▓███████▓▒░  ░▒▓████████▓▒░  ░▒▓██████▓▒░  ░▒▓█▓▒░░▒▓█▓▒░ ░▒▓█▓▒░ ░▒▓██████████████▓▒░  ]],
+            [[ ░▒▓█▓▒░░▒▓█▓▒░ ░▒▓█▓▒░        ░▒▓█▓▒░░▒▓█▓▒░ ░▒▓█▓▒░░▒▓█▓▒░ ░▒▓█▓▒░ ░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░ ]],
+            [[ ░▒▓█▓▒░░▒▓█▓▒░ ░▒▓█▓▒░        ░▒▓█▓▒░░▒▓█▓▒░  ░▒▓█▓▒▒▓█▓▒░  ░▒▓█▓▒░ ░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░ ]],
+            [[ ░▒▓█▓▒░░▒▓█▓▒░ ░▒▓██████▓▒░   ░▒▓█▓▒░░▒▓█▓▒░  ░▒▓█▓▒▒▓█▓▒░  ░▒▓█▓▒░ ░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░ ]],
+            [[ ░▒▓█▓▒░░▒▓█▓▒░ ░▒▓█▓▒░        ░▒▓█▓▒░░▒▓█▓▒░   ░▒▓█▓▓█▓▒░   ░▒▓█▓▒░ ░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░ ]],
+            [[ ░▒▓█▓▒░░▒▓█▓▒░ ░▒▓█▓▒░        ░▒▓█▓▒░░▒▓█▓▒░   ░▒▓█▓▓█▓▒░   ░▒▓█▓▒░ ░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░ ]],
+            [[ ░▒▓█▓▒░░▒▓█▓▒░ ░▒▓████████▓▒░  ░▒▓██████▓▒░     ░▒▓██▓▒░    ░▒▓█▓▒░ ░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░ ]],
         }
         dashboard.section.buttons.val = {
             dashboard.button( "Ctrl-n", "📄 New file" , ":ene <BAR> startinsert <CR>"),
