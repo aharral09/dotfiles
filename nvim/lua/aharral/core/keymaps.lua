@@ -3,6 +3,10 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap
 
+-- visual line movement
+keymap.set("n", "j", "gj")
+keymap.set("n", "k", "gk")
+
 -- use jj to escape insert mode
 keymap.set("i", "jj", "<ESC>")
 
@@ -47,8 +51,8 @@ keymap.set("n", "<leader>md", ":MarkdownPreview<CR>")
 keymap.set("n", "<leader>ex", ":! pandoc -f markdown-implicit_figures -t pdf % > ~/Documents/$(basename % .md).pdf")
 
 -- tabs
-keymap.set("n", "<leader>bn", ":BufferNext<CR>")
-keymap.set("n", "<leader>bp", ":BufferPrevious<CR>")
+keymap.set("n", "<C-]>", ":bn<CR>")
+keymap.set("n", "<C-[", ":bp<CR>")
 
 keymap.set("n", "<leader>bmn", ":BufferMoveNext<CR>")
 keymap.set("n", "<leader>bmp", ":BufferMovePrevious<CR>")
