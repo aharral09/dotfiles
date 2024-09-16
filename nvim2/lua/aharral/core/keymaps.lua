@@ -50,3 +50,6 @@ keymap.set("n", "<leader>md", ":MarkdownPreview<CR>")
 -- tabs
 keymap.set("n", "<C-]>", ":bn<CR>")
 keymap.set("n", "<C-[", ":bp<CR>")
+
+-- neogit
+keymap.set("n", "<leader>gg", ":Neogit<CR>")
