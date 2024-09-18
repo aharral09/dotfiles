@@ -12,8 +12,8 @@ local lualine_gruvbox = require("lualine.themes.gruvbox-material")
 lualine.setup({
   options = {
       --theme = 'dracula-nvim',
-      --theme = lualine_gruvbox,
-      theme = 'catppuccin'
+      theme = lualine_gruvbox,
+      --theme = 'catppuccin'
   },
 })
 

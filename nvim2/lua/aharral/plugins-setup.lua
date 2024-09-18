@@ -71,6 +71,9 @@ return packer.startup(function(use)
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
 
+    -- nvterm
+    use('NvChad/nvterm')
+
     -- nvim-tree
     use('nvim-tree/nvim-tree.lua')
     use('nvim-tree/nvim-web-devicons')

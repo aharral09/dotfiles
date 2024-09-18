@@ -32,7 +32,7 @@ keymap.set("n", "<C-k>", "<C-w>k")
 keymap.set("n", "<C-l>", "<C-w>l")
 
 -- toggle wrap
-keymap.set("n", "<leader>z", ":set wrap!<CR>")
+keymap.set("n", "<leader>nw", ":set wrap!<CR>")
 
 -- NvimTreeToggle
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
