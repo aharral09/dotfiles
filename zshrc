@@ -6,7 +6,9 @@ export ZSH="$HOME/.oh-my-zsh"
 
 #### ALIASES
 alias ff='fastfetch'
-alias vi='nvim'
+alias nv='nvim'
+alias ll='ls -lh'
+alias reload='source ~/.zshrc'
 
 
 # Set name of the theme to load --- if set to "random", it will

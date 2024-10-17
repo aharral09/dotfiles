@@ -32,7 +32,7 @@ keymap.set("n", "<C-k>", "<C-w>k")
 keymap.set("n", "<C-l>", "<C-w>l")
 
 -- toggle wrap
-keymap.set("n", "<leader>z", ":set wrap!<CR>")
+keymap.set("n", "<leader>nw", ":set wrap!<CR>")
 
 -- NvimTreeToggle
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
@@ -47,16 +47,9 @@ keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available 
 -- markdown preview
 keymap.set("n", "<leader>md", ":MarkdownPreview<CR>")
 
--- pdf export
-keymap.set("n", "<leader>ex", ":! pandoc -f markdown-implicit_figures -t pdf % > ~/Documents/$(basename % .md).pdf")
-
 -- tabs
 keymap.set("n", "<C-]>", ":bn<CR>")
 keymap.set("n", "<C-[", ":bp<CR>")
 
-keymap.set("n", "<leader>bmn", ":BufferMoveNext<CR>")
-keymap.set("n", "<leader>bmp", ":BufferMovePrevious<CR>")
-
-
-
-
+-- neogit
+keymap.set("n", "<leader>gg", ":Neogit<CR>")

@@ -1,23 +1,20 @@
-local opt = vim.opt -- for conciseness
+local opt = vim.opt
 
 -- line numbers
-opt.relativenumber = true -- show relative line numbers
-opt.number = true -- shows absolute line number on cursor line (when relative number is on)
-
--- column color
---opt.colorcolumn = "120"
+opt.relativenumber = true
+opt.number = true
 
 -- tabs & indentation
-opt.tabstop = 2 -- 2 spaces for tabs (prettier default)
-opt.shiftwidth = 2 -- 2 spaces for indent width
-opt.expandtab = true -- expand tab to spaces
-opt.autoindent = true -- copy indent from current line when starting new one
+opt.tabstop = 4
+opt.shiftwidth = 4
+opt.expandtab = true
+opt.autoindent = true
 opt.smartindent = true
 opt.linebreak = true
-opt.showbreak = '↪  '
+opt.showbreak = "↪ "
 
 -- line wrapping
-opt.wrap = true -- enable line wrapping
+opt.wrap = true
 
 -- search settings
 opt.ignorecase = true -- ignore case when searching
@@ -51,4 +48,6 @@ opt.showmode = false
 opt.mouse="a"
 
 -- spell check
-opt.spell = true
+--opt.spell = true
+
+-- 
