@@ -62,8 +62,8 @@ return packer.startup(function(use)
 
 	-- colorschemes - update core/colorschemes
 	use('ellisonleao/gruvbox.nvim')	
-    use('Mofiqul/dracula.nvim')
-    use { "catppuccin/nvim", as = "catppuccin" }
+  use('Mofiqul/dracula.nvim')
+  use { "catppuccin/nvim", as = "catppuccin" }
 
     -- lualine
     use {
