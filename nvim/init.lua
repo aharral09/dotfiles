@@ -1,10 +1,10 @@
 require("aharral.core.options")
 require("aharral.core.keymaps")
 require("aharral.core.colorscheme")
-
 require("aharral.plugins.lualine")
 require("aharral.plugins.nvim-tree")
 require("aharral.plugins.telescope")
 require("aharral.plugins.treesitter")
 require("aharral.plugins.neogit")
 require("aharral.plugins.nvterm")
+require("aharral.plugins.mason")
