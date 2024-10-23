@@ -10,6 +10,21 @@ alias nv='nvim'
 alias ll='ls -lh'
 alias reload='source ~/.zshrc'
 
+# tmux
+alias tl='tmux ls'
+alias tn='tmux new -s'
+alias tk='tmux kill-ses -t'
+alias ta='tmux a -t'
+alias td='tmux detach'
+
+# git
+alias gs='git st'
+alias gc='git cm'
+alias gp='git push'
+alias gy='git fetch && git pull'
+alias gd='git diff'
+alias gl='git log'
+alias gr='git revert'
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
