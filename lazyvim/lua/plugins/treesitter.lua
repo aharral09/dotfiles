@@ -4,6 +4,7 @@ return {
     ensure_installed = {
       "lua",
       "markdown",
+      "bash",
     },
   },
 }

@@ -16,6 +16,8 @@ keymap.set("n", "<C-s>", ":w<CR>")
 
 -- Save and Exiting
 keymap.set("n", "<leader>w", ":w<CR>")
+keymap.set("n", "<leader>q", ":q<CR>")
+keymap.set("n", "<leader>Q", ":qa!<CR>")
 keymap.set("n", "<leader>wq", ":wq<CR>")
 keymap.set("n", "<leader>wqa", ":wqa<CR>")
 
