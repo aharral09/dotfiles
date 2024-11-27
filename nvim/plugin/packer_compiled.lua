@@ -75,20 +75,45 @@ time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["alpha-nvim"] = {
-    config = { "\27LJ\2\n•\a\0\0\t\0\31\00186\0\0\0'\2\1\0B\0\2\0026\1\0\0'\3\2\0B\1\2\0029\2\3\0019\2\4\0025\3\6\0=\3\5\0029\2\3\0019\2\a\0024\3\6\0009\4\b\1'\6\t\0'\a\n\0'\b\v\0B\4\4\2>\4\1\0039\4\b\1'\6\f\0'\a\r\0'\b\14\0B\4\4\2>\4\2\0039\4\b\1'\6\15\0'\a\16\0'\b\17\0B\4\4\2>\4\3\0039\4\b\1'\6\18\0'\a\19\0'\b\20\0B\4\4\2>\4\4\0039\4\b\1'\6\21\0'\a\22\0'\b\23\0B\4\4\0?\4\0\0=\3\5\0029\2\24\0019\2\25\2+\3\2\0=\3\26\0026\2\27\0009\2\28\2'\4\29\0B\2\2\0019\2\30\0009\4\24\1B\2\2\1K\0\1\0\nsetup)autocmd User AlphaReady echo 'ready'\bcmd\bvim\14noautocmd\topts\vconfig\f:qa<CR>\18âŒ Quit NVIM\6q\29:Telescope live_grep<CR>\19ğŸ” Find Text\rSpace-fs\30:Telescope find_files<CR>\20ğŸ” Find Files\rSpace-ff\24:NvimTreeToggle<CR>\23ğŸ—‚ File Explorer\fSpace-e :ene <BAR> startinsert <CR>\18ğŸ“„ New file\vCtrl-n\vbutton\fbuttons\1\a\0\0008   _  _                              _             8  | \\| |    ___     ___    __ __    (_)    _ __    8  | .` |   / -_)   / _ \\   \\ V /    | |   | '  \\   8  |_|\\_|   \\___|   \\___/   _\\_/_   _|_|_  |_|_|_|  8 _|\"\"\"\"\"|_|\"\"\"\"\"|_|\"\"\"\"\"|_|\"\"\"\"\"|_|\"\"\"\"\"|_|\"\"\"\"\"|  8 \"`-0-0-'\"`-0-0-'\"`-0-0-'\"`-0-0-'\"`-0-0-'\"`-0-0-'  \bval\vheader\fsection\27alpha.themes.dashboard\nalpha\frequire\v€€À™\4\0" },
+    config = { "\27LJ\2\n™\a\0\0\t\0\31\00186\0\0\0'\2\1\0B\0\2\0026\1\0\0'\3\2\0B\1\2\0029\2\3\0019\2\4\0025\3\6\0=\3\5\0029\2\3\0019\2\a\0024\3\6\0009\4\b\1'\6\t\0'\a\n\0'\b\v\0B\4\4\2>\4\1\0039\4\b\1'\6\f\0'\a\r\0'\b\14\0B\4\4\2>\4\2\0039\4\b\1'\6\15\0'\a\16\0'\b\17\0B\4\4\2>\4\3\0039\4\b\1'\6\18\0'\a\19\0'\b\20\0B\4\4\2>\4\4\0039\4\b\1'\6\21\0'\a\22\0'\b\23\0B\4\4\0?\4\0\0=\3\5\0029\2\24\0019\2\25\2+\3\2\0=\3\26\0026\2\27\0009\2\28\2'\4\29\0B\2\2\0019\2\30\0009\4\24\1B\2\2\1K\0\1\0\nsetup)autocmd User AlphaReady echo 'ready'\bcmd\bvim\14noautocmd\topts\vconfig\f:qa<CR>\19âŒ  Quit NVIM\6q\29:Telescope live_grep<CR>\20ğŸ”  Find Text\rSpace-fs\30:Telescope find_files<CR>\21ğŸ”  Find Files\rSpace-ff\24:NvimTreeToggle<CR>\23ğŸ—‚ File Explorer\fSpace-e :ene <BAR> startinsert <CR>\19ğŸ“„  New file\vCtrl-n\vbutton\fbuttons\1\a\0\0008   _  _                              _             8  | \\| |    ___     ___    __ __    (_)    _ __    8  | .` |   / -_)   / _ \\   \\ V /    | |   | '  \\   8  |_|\\_|   \\___|   \\___/   _\\_/_   _|_|_  |_|_|_|  8 _|\"\"\"\"\"|_|\"\"\"\"\"|_|\"\"\"\"\"|_|\"\"\"\"\"|_|\"\"\"\"\"|_|\"\"\"\"\"|  8 \"`-0-0-'\"`-0-0-'\"`-0-0-'\"`-0-0-'\"`-0-0-'\"`-0-0-'  \bval\vheader\fsection\27alpha.themes.dashboard\nalpha\frequire\v€€À™\4\0" },
     loaded = true,
     path = "/Users/aharral/.local/share/nvim/site/pack/packer/start/alpha-nvim",
     url = "https://github.com/goolord/alpha-nvim"
   },
-  ["codeium.vim"] = {
+  ["cmp-buffer"] = {
     loaded = true,
-    path = "/Users/aharral/.local/share/nvim/site/pack/packer/start/codeium.vim",
-    url = "https://github.com/Exafunction/codeium.vim"
+    path = "/Users/aharral/.local/share/nvim/site/pack/packer/start/cmp-buffer",
+    url = "https://github.com/hrsh7th/cmp-buffer"
+  },
+  ["cmp-cmdline"] = {
+    loaded = true,
+    path = "/Users/aharral/.local/share/nvim/site/pack/packer/start/cmp-cmdline",
+    url = "https://github.com/hrsh7th/cmp-cmdline"
+  },
+  ["cmp-nvim-lsp"] = {
+    loaded = true,
+    path = "/Users/aharral/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
+    url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+  },
+  ["cmp-path"] = {
+    loaded = true,
+    path = "/Users/aharral/.local/share/nvim/site/pack/packer/start/cmp-path",
+    url = "https://github.com/hrsh7th/cmp-path"
   },
   ["gruvbox.nvim"] = {
     loaded = true,
     path = "/Users/aharral/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
     url = "https://github.com/ellisonleao/gruvbox.nvim"
+  },
+  ["indent-blankline.nvim"] = {
+    loaded = true,
+    path = "/Users/aharral/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
+    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
+  ["lazygit.nvim"] = {
+    loaded = true,
+    path = "/Users/aharral/.local/share/nvim/site/pack/packer/start/lazygit.nvim",
+    url = "https://github.com/kdheepak/lazygit.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -110,10 +135,10 @@ _G.packer_plugins = {
     path = "/Users/aharral/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
-  neogit = {
+  ["nordic.nvim"] = {
     loaded = true,
-    path = "/Users/aharral/.local/share/nvim/site/pack/packer/start/neogit",
-    url = "https://github.com/NeogitOrg/neogit"
+    path = "/Users/aharral/.local/share/nvim/site/pack/packer/start/nordic.nvim",
+    url = "https://github.com/AlexvZyl/nordic.nvim"
   },
   ["nvim-autopairs"] = {
     config = { "\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0" },
@@ -122,6 +147,11 @@ _G.packer_plugins = {
     only_cond = false,
     path = "/Users/aharral/.local/share/nvim/site/pack/packer/opt/nvim-autopairs",
     url = "https://github.com/windwp/nvim-autopairs"
+  },
+  ["nvim-cmp"] = {
+    loaded = true,
+    path = "/Users/aharral/.local/share/nvim/site/pack/packer/start/nvim-cmp",
+    url = "https://github.com/hrsh7th/nvim-cmp"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -148,6 +178,11 @@ _G.packer_plugins = {
     path = "/Users/aharral/.local/share/nvim/site/pack/packer/start/nvterm",
     url = "https://github.com/NvChad/nvterm"
   },
+  ["obsidian.nvim"] = {
+    loaded = true,
+    path = "/Users/aharral/.local/share/nvim/site/pack/packer/start/obsidian.nvim",
+    url = "https://github.com/epwalsh/obsidian.nvim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/aharral/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -159,7 +194,7 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ["render-markdown"] = {
-    config = { "\27LJ\2\n\\\0\0\3\0\4\0\f6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\0016\0\0\0'\2\1\0B\0\2\0029\0\3\0B\0\1\1K\0\1\0\venable\nsetup\20render-markdown\frequire\0" },
+    config = { "\27LJ\2\nÄ\1\0\0\4\0\t\0\0166\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\2B\0\2\0016\0\0\0'\2\1\0B\0\2\0029\0\b\0B\0\1\1K\0\1\0\venable\fheading\1\0\2\vborder\2\19border_virtual\2\vbullet\1\0\2\fheading\0\vbullet\0\1\0\2\14right_pad\3\1\rleft_pad\3\0\nsetup\20render-markdown\frequire\0" },
     load_after = {},
     loaded = true,
     needs_bufread = false,
@@ -175,13 +210,28 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/aharral/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["vim-be-good"] = {
+    loaded = true,
+    path = "/Users/aharral/.local/share/nvim/site/pack/packer/start/vim-be-good",
+    url = "https://github.com/ThePrimeagen/vim-be-good"
+  },
+  ["vim-tmux-navigator"] = {
+    loaded = true,
+    path = "/Users/aharral/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
+    url = "https://github.com/christoomey/vim-tmux-navigator"
+  },
+  ["yazi.nvim"] = {
+    loaded = true,
+    path = "/Users/aharral/.local/share/nvim/site/pack/packer/start/yazi.nvim",
+    url = "https://github.com/mikavilpas/yazi.nvim"
   }
 }
 
 time([[Defining packer_plugins]], false)
 -- Config for: alpha-nvim
 time([[Config for alpha-nvim]], true)
-try_loadstring("\27LJ\2\n•\a\0\0\t\0\31\00186\0\0\0'\2\1\0B\0\2\0026\1\0\0'\3\2\0B\1\2\0029\2\3\0019\2\4\0025\3\6\0=\3\5\0029\2\3\0019\2\a\0024\3\6\0009\4\b\1'\6\t\0'\a\n\0'\b\v\0B\4\4\2>\4\1\0039\4\b\1'\6\f\0'\a\r\0'\b\14\0B\4\4\2>\4\2\0039\4\b\1'\6\15\0'\a\16\0'\b\17\0B\4\4\2>\4\3\0039\4\b\1'\6\18\0'\a\19\0'\b\20\0B\4\4\2>\4\4\0039\4\b\1'\6\21\0'\a\22\0'\b\23\0B\4\4\0?\4\0\0=\3\5\0029\2\24\0019\2\25\2+\3\2\0=\3\26\0026\2\27\0009\2\28\2'\4\29\0B\2\2\0019\2\30\0009\4\24\1B\2\2\1K\0\1\0\nsetup)autocmd User AlphaReady echo 'ready'\bcmd\bvim\14noautocmd\topts\vconfig\f:qa<CR>\18âŒ Quit NVIM\6q\29:Telescope live_grep<CR>\19ğŸ” Find Text\rSpace-fs\30:Telescope find_files<CR>\20ğŸ” Find Files\rSpace-ff\24:NvimTreeToggle<CR>\23ğŸ—‚ File Explorer\fSpace-e :ene <BAR> startinsert <CR>\18ğŸ“„ New file\vCtrl-n\vbutton\fbuttons\1\a\0\0008   _  _                              _             8  | \\| |    ___     ___    __ __    (_)    _ __    8  | .` |   / -_)   / _ \\   \\ V /    | |   | '  \\   8  |_|\\_|   \\___|   \\___/   _\\_/_   _|_|_  |_|_|_|  8 _|\"\"\"\"\"|_|\"\"\"\"\"|_|\"\"\"\"\"|_|\"\"\"\"\"|_|\"\"\"\"\"|_|\"\"\"\"\"|  8 \"`-0-0-'\"`-0-0-'\"`-0-0-'\"`-0-0-'\"`-0-0-'\"`-0-0-'  \bval\vheader\fsection\27alpha.themes.dashboard\nalpha\frequire\v€€À™\4\0", "config", "alpha-nvim")
+try_loadstring("\27LJ\2\n™\a\0\0\t\0\31\00186\0\0\0'\2\1\0B\0\2\0026\1\0\0'\3\2\0B\1\2\0029\2\3\0019\2\4\0025\3\6\0=\3\5\0029\2\3\0019\2\a\0024\3\6\0009\4\b\1'\6\t\0'\a\n\0'\b\v\0B\4\4\2>\4\1\0039\4\b\1'\6\f\0'\a\r\0'\b\14\0B\4\4\2>\4\2\0039\4\b\1'\6\15\0'\a\16\0'\b\17\0B\4\4\2>\4\3\0039\4\b\1'\6\18\0'\a\19\0'\b\20\0B\4\4\2>\4\4\0039\4\b\1'\6\21\0'\a\22\0'\b\23\0B\4\4\0?\4\0\0=\3\5\0029\2\24\0019\2\25\2+\3\2\0=\3\26\0026\2\27\0009\2\28\2'\4\29\0B\2\2\0019\2\30\0009\4\24\1B\2\2\1K\0\1\0\nsetup)autocmd User AlphaReady echo 'ready'\bcmd\bvim\14noautocmd\topts\vconfig\f:qa<CR>\19âŒ  Quit NVIM\6q\29:Telescope live_grep<CR>\20ğŸ”  Find Text\rSpace-fs\30:Telescope find_files<CR>\21ğŸ”  Find Files\rSpace-ff\24:NvimTreeToggle<CR>\23ğŸ—‚ File Explorer\fSpace-e :ene <BAR> startinsert <CR>\19ğŸ“„  New file\vCtrl-n\vbutton\fbuttons\1\a\0\0008   _  _                              _             8  | \\| |    ___     ___    __ __    (_)    _ __    8  | .` |   / -_)   / _ \\   \\ V /    | |   | '  \\   8  |_|\\_|   \\___|   \\___/   _\\_/_   _|_|_  |_|_|_|  8 _|\"\"\"\"\"|_|\"\"\"\"\"|_|\"\"\"\"\"|_|\"\"\"\"\"|_|\"\"\"\"\"|_|\"\"\"\"\"|  8 \"`-0-0-'\"`-0-0-'\"`-0-0-'\"`-0-0-'\"`-0-0-'\"`-0-0-'  \bval\vheader\fsection\27alpha.themes.dashboard\nalpha\frequire\v€€À™\4\0", "config", "alpha-nvim")
 time([[Config for alpha-nvim]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
@@ -189,7 +239,7 @@ vim.cmd [[ packadd nvim-treesitter ]]
 vim.cmd [[ packadd render-markdown ]]
 
 -- Config for: render-markdown
-try_loadstring("\27LJ\2\n\\\0\0\3\0\4\0\f6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\0016\0\0\0'\2\1\0B\0\2\0029\0\3\0B\0\1\1K\0\1\0\venable\nsetup\20render-markdown\frequire\0", "config", "render-markdown")
+try_loadstring("\27LJ\2\nÄ\1\0\0\4\0\t\0\0166\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\2B\0\2\0016\0\0\0'\2\1\0B\0\2\0029\0\b\0B\0\1\1K\0\1\0\venable\fheading\1\0\2\vborder\2\19border_virtual\2\vbullet\1\0\2\fheading\0\vbullet\0\1\0\2\14right_pad\3\1\rleft_pad\3\0\nsetup\20render-markdown\frequire\0", "config", "render-markdown")
 
 time([[Sequenced loading]], false)
 vim.cmd [[augroup packer_load_aucmds]]

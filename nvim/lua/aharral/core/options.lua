@@ -12,6 +12,8 @@ opt.autoindent = true
 opt.smartindent = true
 opt.linebreak = true
 opt.showbreak = "↪ "
+opt.swapfile = false
+opt.conceallevel = 1
 
 -- line wrapping
 opt.wrap = true

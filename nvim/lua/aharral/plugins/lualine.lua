@@ -14,6 +14,7 @@ lualine.setup({
       --theme = 'dracula-nvim',
       theme = lualine_gruvbox,
       --theme = 'catppuccin'
+      --theme = 'nordic'
   },
 })
 

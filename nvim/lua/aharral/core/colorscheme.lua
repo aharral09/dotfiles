@@ -7,6 +7,11 @@ require("gruvbox").setup({
   })
 local status, _ = pcall(vim.cmd, "colorscheme gruvbox")
 
+--require("nordic").setup({
+--    transparent_mode = true,
+--  })
+--local status, _ = pcall(vim.cmd, "colorscheme nordic")
+
 -- DRACULA
 -- require("dracula").setup({
 --     transparent_mode = true,

@@ -29,26 +29,39 @@ end
 -- add list of plugins to install
 return packer.startup(function(use)
   use('wbthomason/packer.nvim')
-  use('Exafunction/codeium.vim')
-  use('NeogitOrg/neogit')
+  use('mikavilpas/yazi.nvim')
+  use('ThePrimeagen/vim-be-good')
+  use('lukas-reineke/indent-blankline.nvim')
+  use("kdheepak/lazygit.nvim")
   use('nvim-lua/plenary.nvim')
-  use({"nvim-telescope/telescope-fzf-native.nvim", run = "make"}) -- dependency for better sorting performance
-  use({"nvim-telescope/telescope.nvim"}) -- fuzzy finder
-  use('ellisonleao/gruvbox.nvim')	
+  use({'nvim-telescope/telescope-fzf-native.nvim', run = 'make'})
+  use('nvim-telescope/telescope.nvim')
+  use('ellisonleao/gruvbox.nvim')
+  use('AlexvZyl/nordic.nvim')
   use('NvChad/nvterm')
   use('nvim-tree/nvim-tree.lua')
   use('nvim-tree/nvim-web-devicons')
-  use("nvim-treesitter/nvim-treesitter", {run = ":TSUpdate"})
+  use({'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'})
   use('iamcco/markdown-preview.nvim')
-  use('williamboman/mason.nvim')
-  use {
-    "williamboman/mason.nvim",
-    "williamboman/mason-lspconfig.nvim",
-    "neovim/nvim-lspconfig",
+  use('christoomey/vim-tmux-navigator')
+  use('hrsh7th/cmp-nvim-lsp')
+  use('hrsh7th/cmp-buffer')
+  use('hrsh7th/cmp-path')
+  use('hrsh7th/cmp-cmdline')
+  use('hrsh7th/nvim-cmp')
+  use{
+    'williamboman/mason.nvim',
+    'williamboman/mason-lspconfig.nvim',
+    'neovim/nvim-lspconfig',
   }
   use {
       'nvim-lualine/lualine.nvim',
       requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  }
+  use {
+      'epwalsh/obsidian.nvim',
+      tag = "*",
+      requires = { 'nvim-lua/plenary.nvim' }
   }
   use({
       'MeanderingProgrammer/markdown.nvim',
@@ -56,8 +69,17 @@ return packer.startup(function(use)
       after = { 'nvim-treesitter' },
       requires = { 'nvim-tree/nvim-web-devicons', opt = true }, -- if you prefer nvim-web-devicons
       config = function()
-          require('render-markdown').setup({})
-          require('render-markdown').enable()
+      require('render-markdown').setup({
+          bullet = {
+              right_pad = 1,
+              left_pad = 0,
+          },
+          heading = {
+              border = true,
+              border_virtual = true,
+          }
+      })
+      require('render-markdown').enable()
       end,
   })
   use {
@@ -65,7 +87,7 @@ return packer.startup(function(use)
       event = "InsertEnter",
       config = function()
           require("nvim-autopairs").setup {}
-      end
+  end,
   }
   use {
       'goolord/alpha-nvim',
@@ -73,23 +95,23 @@ return packer.startup(function(use)
       local alpha = require'alpha'
       local dashboard = require'alpha.themes.dashboard'
       dashboard.section.header.val = {
-          [[   _  _                              _             ]], 
-          [[  | \| |    ___     ___    __ __    (_)    _ __    ]], 
-          [[  | .` |   / -_)   / _ \   \ V /    | |   | '  \   ]], 
-          [[  |_|\_|   \___|   \___/   _\_/_   _|_|_  |_|_|_|  ]], 
-          [[ _|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|  ]], 
+          [[   _  _                              _             ]],
+          [[  | \| |    ___     ___    __ __    (_)    _ __    ]],
+          [[  | .` |   / -_)   / _ \   \ V /    | |   | '  \   ]],
+          [[  |_|\_|   \___|   \___/   _\_/_   _|_|_  |_|_|_|  ]],
+          [[ _|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|  ]],
           [[ "`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'  ]]
       }
       dashboard.section.buttons.val = {
-          dashboard.button( "Ctrl-n", "📄 New file" , ":ene <BAR> startinsert <CR>"),
+          dashboard.button( "Ctrl-n", "📄  New file" , ":ene <BAR> startinsert <CR>"),
           dashboard.button( "Space-e", "🗂 File Explorer" , ":NvimTreeToggle<CR>"),
-          dashboard.button( "Space-ff", "🔎 Find Files", ":Telescope find_files<CR>"),
-          dashboard.button( "Space-fs", "🔎 Find Text", ":Telescope live_grep<CR>"),
-          dashboard.button( "q", "❌ Quit NVIM" , ":qa<CR>"),
+          dashboard.button( "Space-ff", "🔎  Find Files", ":Telescope find_files<CR>"),
+          dashboard.button( "Space-fs", "🔎  Find Text", ":Telescope live_grep<CR>"),
+          dashboard.button( "q", "❌  Quit NVIM" , ":qa<CR>"),
       }
       dashboard.config.opts.noautocmd = true
       vim.cmd[[autocmd User AlphaReady echo 'ready']]
-      alpha.setup(dashboard.config)                                                                                     
+      alpha.setup(dashboard.config)
       end
   }
 	if packer_bootstrap then

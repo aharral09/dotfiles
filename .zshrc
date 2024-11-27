@@ -3,12 +3,29 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-
-#### ALIASES
+export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
+export PATH="$PATH:/Users/aharral/.local/bin"
+export EDITOR=nvim
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+eval "$(zoxide init zsh)"
+# normal
 alias ff='fastfetch'
 alias nv='nvim'
+alias vi='nvim'
+alias v='nvim'
+alias nf='nvim $(fzf)'
+alias lc='ls -C'
 alias ll='ls -lh'
 alias reload='source ~/.zshrc'
+alias deploy='cd ~/git/hpcwebsite/ && mkdocs gh-deploy'
+alias ssho='ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no -o PasswordAuthentication=yes'
 
 # tmux
 alias tl='tmux ls'
@@ -16,6 +33,8 @@ alias tn='tmux new -s'
 alias tk='tmux kill-ses -t'
 alias ta='tmux a -t'
 alias td='tmux detach'
+alias ts='tmuxinator start'
+alias tr='tmux source-file ~/.tmux.conf'
 
 # git
 alias gs='git st'
@@ -23,8 +42,13 @@ alias gc='git cm'
 alias gp='git push'
 alias gy='git fetch && git pull'
 alias gd='git diff'
-alias gl='git log'
+alias gL='git log --graph'
 alias gr='git revert'
+alias lg='lazygit'
+
+# ansible
+alias ap='ansible-playbook'
+alias al='ansible-lint'
 
 # Auto-suggestions
 source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -124,3 +148,5 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Created by `pipx` on 2024-11-06 21:22:03
