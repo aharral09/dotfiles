@@ -32,7 +32,7 @@ return packer.startup(function(use)
   use('mikavilpas/yazi.nvim')
   use('ThePrimeagen/vim-be-good')
   use('lukas-reineke/indent-blankline.nvim')
-  use("kdheepak/lazygit.nvim")
+  use('kdheepak/lazygit.nvim')
   use('nvim-lua/plenary.nvim')
   use({'nvim-telescope/telescope-fzf-native.nvim', run = 'make'})
   use('nvim-telescope/telescope.nvim')
@@ -49,11 +49,9 @@ return packer.startup(function(use)
   use('hrsh7th/cmp-path')
   use('hrsh7th/cmp-cmdline')
   use('hrsh7th/nvim-cmp')
-  use{
-    'williamboman/mason.nvim',
-    'williamboman/mason-lspconfig.nvim',
-    'neovim/nvim-lspconfig',
-  }
+  use('williamboman/mason.nvim')
+  use('williamboman/mason-lspconfig.nvim')
+  use('neovim/nvim-lspconfig')
   use {
       'nvim-lualine/lualine.nvim',
       requires = { 'nvim-tree/nvim-web-devicons', opt = true }
@@ -61,7 +59,6 @@ return packer.startup(function(use)
   use {
       'epwalsh/obsidian.nvim',
       tag = "*",
-      requires = { 'nvim-lua/plenary.nvim' }
   }
   use({
       'MeanderingProgrammer/markdown.nvim',
