@@ -40,7 +40,7 @@ map("n", "<C-l>", "<C-w>l")
 map("n", "<leader>sw", ":set wrap!<CR>")
 
 -- Neotree
-map("n", "<leader>e", ":Neotree toggle right<CR>")
+map("n", "<leader>e", ":Neotree toggle left<CR>")
 
 -- telescope
 map("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
