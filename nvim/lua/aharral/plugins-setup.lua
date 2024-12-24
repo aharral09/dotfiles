@@ -29,6 +29,7 @@ end
 -- add list of plugins to install
 return packer.startup(function(use)
   use('wbthomason/packer.nvim')
+  use {'edluffy/hologram.nvim'}
   use('mikavilpas/yazi.nvim')
   use('ThePrimeagen/vim-be-good')
   use('lukas-reineke/indent-blankline.nvim')
@@ -52,6 +53,7 @@ return packer.startup(function(use)
   use('williamboman/mason.nvim')
   use('williamboman/mason-lspconfig.nvim')
   use('neovim/nvim-lspconfig')
+  use('romgrk/barbar.nvim')
   use {
       'nvim-lualine/lualine.nvim',
       requires = { 'nvim-tree/nvim-web-devicons', opt = true }
@@ -71,10 +73,10 @@ return packer.startup(function(use)
               right_pad = 1,
               left_pad = 0,
           },
-          heading = {
-              border = true,
-              border_virtual = true,
-          }
+          --heading = {
+          --    border = true,
+          --    border_virtual = true,
+          --}
       })
       require('render-markdown').enable()
       end,

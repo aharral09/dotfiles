@@ -26,6 +26,7 @@ alias ll='ls -lh'
 alias reload='source ~/.zshrc'
 alias deploy='cd ~/git/hpcwebsite/ && mkdocs gh-deploy'
 alias ssho='ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no -o PasswordAuthentication=yes'
+alias scpo='scp -o PreferredAuthentications=password -o PubkeyAuthentication=no -o PasswordAuthentication=yes'
 
 # tmux
 alias tl='tmux ls'

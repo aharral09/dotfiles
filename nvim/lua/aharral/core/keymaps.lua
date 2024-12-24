@@ -8,13 +8,12 @@ keymap.set("n", "k", "gk")
 
 -- use jj to escape insert mode
 keymap.set("i", "jj", "<ESC>")
+keymap.set("i", "jk", "<ESC>")
 keymap.set("i", "<C-c>", "<ESC>")
 
 -- Save file
 keymap.set("i", "<C-s>", ":w<CR>")
 keymap.set("n", "<C-s>", ":w<CR>")
-
--- Save and Exiting
 keymap.set("n", "<leader>w", ":w<CR>")
 keymap.set("n", "<leader>q", ":q<CR>")
 keymap.set("n", "<leader>Q", ":qa!<CR>")
@@ -22,7 +21,7 @@ keymap.set("n", "<leader>wq", ":wq<CR>")
 keymap.set("n", "<leader>wqa", ":wqa<CR>")
 
 -- New file
-keymap.set("n", "<C-n>", ":ene <BAR> startinsert <CR>")
+keymap.set("n", "<C-t>", ":ene <BAR> startinsert <CR>")
 
 -- window management
 keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
@@ -48,7 +47,6 @@ keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
 keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>") -- find string in current working directory as you type
 keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string under cursor in current working directory
-keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
 
 -- Obsidian
@@ -59,9 +57,11 @@ keymap.set("n", "<leader>nd", "<cmd>ObsidianDailies<cr>")
 -- markdown preview
 keymap.set("n", "<leader>mp", ":MarkdownPreview<CR>")
 
--- tabs
-keymap.set("n", "<C-]>", ":bn<CR>")
-keymap.set("n", "<C-[", ":bp<CR>")
+-- buffers
+keymap.set("n", "<leader>bb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
+keymap.set("n", "bn", ":bn<CR>")
+keymap.set("n", "bp", ":bp<CR>")
+keymap.set("n", "<C-w>", ":BufferClose<CR>")
 
 -- lazygit
 keymap.set("n", "<leader>lg", ":LazyGit<CR>")
