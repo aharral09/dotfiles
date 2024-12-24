@@ -1,9 +1,31 @@
 return {
-  'nvimdev/dashboard-nvim',
-  event = 'VimEnter',
+  "goolord/alpha-nvim",
+  dependencies = {
+    "nvim-tree/nvim-web-devicons",
+  },
+
   config = function()
-    require('dashboard').setup {
+    local alpha = require("alpha")
+    local dashboard = require("alpha.themes.startify")
+
+    dashboard.section.header.val = {
+      [[                                                                       ]],
+      [[                                                                       ]],
+      [[                                                                       ]],
+      [[                                                                       ]],
+      [[                                                                     ]],
+      [[       ████ ██████           █████      ██                     ]],
+      [[      ███████████             █████                             ]],
+      [[      █████████ ███████████████████ ███   ███████████   ]],
+      [[     █████████  ███    █████████████ █████ ██████████████   ]],
+      [[    █████████ ██████████ █████████ █████ █████ ████ █████   ]],
+      [[  ███████████ ███    ███ █████████ █████ █████ ████ █████  ]],
+      [[ ██████  █████████████████████ ████ █████ █████ ████ ██████ ]],
+      [[                                                                       ]],
+      [[                                                                       ]],
+      [[                                                                       ]],
     }
+
+    alpha.setup(dashboard.opts)
   end,
-  dependencies = { {'nvim-tree/nvim-web-devicons'}}
 }
