@@ -1,19 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
-export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
-export PATH="$PATH:/Users/aharral/.local/bin"
-export EDITOR=nvim
-function y() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	yazi "$@" --cwd-file="$tmp"
-	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		builtin cd -- "$cwd"
-	fi
-	rm -f -- "$tmp"
-}
 eval "$(zoxide init zsh)"
 # normal
 alias ff='fastfetch'
@@ -24,9 +11,6 @@ alias nf='nvim $(fzf)'
 alias lc='ls -C'
 alias ll='ls -lh'
 alias reload='source ~/.zshrc'
-alias deploy='cd ~/git/hpcwebsite/ && mkdocs gh-deploy'
-alias ssho='ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no -o PasswordAuthentication=yes'
-alias scpo='scp -o PreferredAuthentications=password -o PubkeyAuthentication=no -o PasswordAuthentication=yes'
 
 # tmux
 alias tl='tmux ls'
@@ -46,13 +30,6 @@ alias gd='git diff'
 alias gL='git log --graph'
 alias gr='git revert'
 alias lg='lazygit'
-
-# ansible
-alias ap='ansible-playbook'
-alias al='ansible-lint'
-
-# Auto-suggestions
-source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
