@@ -12,6 +12,12 @@ alias lc='ls -C'
 alias ll='ls -lh'
 alias reload='source ~/.zshrc'
 
+# package management
+alias install='sudo dnf -y install'
+alias update='sudo dnf -y update'
+alias upgrade='sudo dnf -y upgrade'
+alias uninstall='sudo dnf -y remove'
+
 # tmux
 alias tl='tmux ls'
 alias tn='tmux new -s'
