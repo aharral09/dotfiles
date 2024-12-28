@@ -15,7 +15,7 @@ map("i", "<C-s>", ":w<CR>")
 map("n", "<C-s>", ":w<CR>")
 map("n", "<leader>w", ":w<CR>")
 map("n", "<leader>q", ":q<CR>")
-map("n", "<leader>Q", ":qa!<CR>")
+map("n", "<leader>qa", ":qa!<CR>")
 map("n", "<leader>wq", ":wq<CR>")
 map("n", "<leader>wqa", ":wqa<CR>")
 
