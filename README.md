@@ -1,9 +1,9 @@
 # My Dotfiles
 
-This repository is for a copy of my dotfiles (used with stow). These are configurations for applications such as zsh, neovim, alacritty, tmux, i3, etc.
-
+My dotfiles (used with stow)
 
 ```bash
+git clone https://github.com/aharral09/dotfiles.git
 dnf/apt/brew install stow
 stow <dirname>
 ```
