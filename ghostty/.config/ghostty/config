@@ -7,8 +7,8 @@ font-size = 11
 
 window-decoration = true
 
-background-opacity = 0.85
-background-blur-radius = 90
+background-opacity = 1.0
+background-blur-radius = 20
 shell-integration-features = no-cursor
 
 cursor-style = block
