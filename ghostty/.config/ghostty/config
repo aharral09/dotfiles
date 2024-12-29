@@ -1,0 +1,14 @@
+term = xterm-256color
+theme = GruvboxDark
+
+font-family = "JetBrainsMono Nerd Font"
+font-thicken = true
+font-size = 14
+
+window-decoration = true
+
+background-opacity = 0.85
+background-blur-radius = 90
+shell-integration-features = no-cursor
+
+cursor-style = block
