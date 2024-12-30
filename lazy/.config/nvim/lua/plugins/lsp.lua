@@ -25,6 +25,9 @@ return {
 			lspconfig.clangd.setup({
         capabilities  = capabilities
       })
+			lspconfig.bashls.setup({
+        capabilities  = capabilities
+      })
       lspconfig.ansiblels.setup({
         filetypes = { "yaml", "yml" },
         root_dir = lspconfig.util.root_pattern("ansible", "playbooks"),
