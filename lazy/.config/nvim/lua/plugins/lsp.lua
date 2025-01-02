@@ -7,7 +7,7 @@ return {
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
-    lazy = false,
+    lazy = true,
     opts = {
       ensure_installed = {"lua_ls", "ansiblels", "bashls", "dockerls", "marksman", "clangd"},
       auto_install = true,
@@ -15,7 +15,7 @@ return {
 	},
 	{
 		"neovim/nvim-lspconfig",
-    lazy = false,
+    lazy = true,
 		config = function()
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
 			local lspconfig = require("lspconfig")
