@@ -11,13 +11,13 @@ map("i", "jk", "<ESC>")
 map("i", "<C-c>", "<ESC>")
 
 -- Save file
-map("i", "<C-s>", ":w<CR>")
-map("n", "<C-s>", ":w<CR>")
-map("n", "<leader>w", ":w<CR>")
-map("n", "<leader>q", ":q<CR>")
-map("n", "<leader>qa", ":qa!<CR>")
-map("n", "<leader>wq", ":wq<CR>")
-map("n", "<leader>wqa", ":wqa<CR>")
+--map("i", "<C-s>", ":w<CR>")
+--map("n", "<C-s>", ":w<CR>")
+--map("n", "<leader>w", ":w<CR>")
+--map("n", "<leader>q", ":q<CR>")
+--map("n", "<leader>qa", ":qa!<CR>")
+--map("n", "<leader>wq", ":wq<CR>")
+--map("n", "<leader>wqa", ":wqa<CR>")
 
 -- New file
 map("n", "<C-t>", ":ene <BAR> startinsert <CR>")
