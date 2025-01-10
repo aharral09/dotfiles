@@ -9,6 +9,9 @@ return {
 	{
 		"williamboman/mason-lspconfig.nvim",
     lazy = false,
+		config = function()
+			require("mason-lspconfig").setup()
+		end,
     opts = {
       ensure_installed = {"lua_ls", "ansiblels", "bashls", "dockerls", "marksman", "clangd", "jedi_language_server"},
       auto_install = true,
