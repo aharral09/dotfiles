@@ -1,6 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 export PATH=$HOME/.spicetify/:$PATH
+export SHELL=/usr/bin/zsh
 
 
 eval "$(zoxide init zsh)"
