@@ -5,6 +5,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
 export PATH="$PATH:/Users/aharral/.local/bin"
+export PATH="$HOME/.config/emacs/bin:$PATH"
 export EDITOR=nvim
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -15,6 +16,7 @@ function y() {
 	rm -f -- "$tmp"
 }
 eval "$(zoxide init zsh)"
+
 # normal
 alias ff='fastfetch'
 alias nv='nvim'
@@ -152,4 +154,3 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Created by `pipx` on 2024-11-06 21:22:03
-

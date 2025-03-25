@@ -1,6 +1,9 @@
 vim.g.mapleader = " "
 local map = vim.keymap.set
 
+-- run script
+map("n", "<C-x>", ":!./%<CR>")
+
 -- visual line movement
 map("n", "j", "gj")
 map("n", "k", "gk")
@@ -11,13 +14,13 @@ map("i", "jk", "<ESC>")
 map("i", "<C-c>", "<ESC>")
 
 -- Save file
---map("i", "<C-s>", ":w<CR>")
---map("n", "<C-s>", ":w<CR>")
---map("n", "<leader>w", ":w<CR>")
---map("n", "<leader>q", ":q<CR>")
---map("n", "<leader>qa", ":qa!<CR>")
---map("n", "<leader>wq", ":wq<CR>")
---map("n", "<leader>wqa", ":wqa<CR>")
+map("i", "<C-s>", ":w<CR>")
+map("n", "<C-s>", ":w<CR>")
+map("n", "<leader>w", ":w<CR>")
+map("n", "<leader>q", ":q<CR>")
+map("n", "<leader>qa", ":qa!<CR>")
+map("n", "<leader>wq", ":wq<CR>")
+map("n", "<leader>wqa", ":wqa<CR>")
 
 -- New file
 map("n", "<C-t>", ":ene <BAR> startinsert <CR>")
@@ -40,22 +43,25 @@ map("n", "<C-l>", "<C-w>l")
 map("n", "<leader>sw", ":set wrap!<CR>")
 
 -- Neotree
-map("n", "<leader>e", ":Neotree toggle left<CR>")
+map("n", "<leader>e", ":NvimTreeToggle<CR>")
+
+-- Oil
+map("n", "-", ":Oil<CR>")
 
 -- telescope
 map("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
 map("n", "<leader>fs", "<cmd>Telescope live_grep<cr>") -- find string in current working directory as you type
 map("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string under cursor in current working directory
+map("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- find string under cursor in current working directory
 map("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
 
 -- markdown preview
 map("n", "<leader>mp", ":MarkdownPreview<CR>")
 
 -- buffers
-map("n", "<leader>bb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
-map("n", "bn", ":bn<CR>")
-map("n", "bp", ":bp<CR>")
-map("n", "<C-w>", ":BufferClose<CR>")
+map("n", "<C-n>", ":bn<CR>")
+map("n", "<C-p>", ":bp<CR>")
+map("n", "<C-w>", ":bd<CR>")
 
 -- lazygit
 map("n", "<leader>lg", ":LazyGit<CR>")
