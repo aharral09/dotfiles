@@ -14,6 +14,7 @@ alias nf='nvim $(fzf)'
 alias lc='ls -C'
 alias ll='ls -lh'
 alias reload='source ~/.zshrc'
+alias ss='sshs -c ~/.ssh/config'
 
 # package management
 alias install='sudo dnf -y install'
