@@ -9,7 +9,7 @@ config.window_decorations = "TITLE | RESIZE"
 config.enable_tab_bar = true
 config.use_fancy_tab_bar = true
 config.hide_tab_bar_if_only_one_tab = true
-config.window_background_opacity = 0.90
+config.window_background_opacity = 0.95
 config.adjust_window_size_when_changing_font_size = false
 config.colors = {
   cursor_bg = '#ffffff',
@@ -29,4 +29,5 @@ config.keys = {
     action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' },
   },
 }
+config.default_prog = { 'zsh' }
 return config
