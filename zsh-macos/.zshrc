@@ -5,7 +5,8 @@
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
 export PATH="$PATH:/Users/aharral/.local/bin"
-export PATH="$HOME/.config/emacs/bin:$PATH"
+export PATH="$PATH:/Users/aharral/dotfiles/.bin"
+export PATH="$PATH:/opt/homebrew/bin"
 export EDITOR=nvim
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -55,7 +56,7 @@ alias ap='ansible-playbook'
 alias al='ansible-lint'
 
 # Auto-suggestions
-source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
