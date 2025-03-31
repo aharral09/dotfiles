@@ -7,3 +7,4 @@ background-opacity = 0.90
 background-blur-radius = 50
 shell-integration-features = no-cursor
 cursor-style = block
+shell-integration = zsh
