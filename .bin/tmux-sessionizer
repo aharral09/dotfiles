@@ -3,7 +3,7 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/git ~/notes ~/ -mindepth 1 -maxdepth 2 -type d | fzf)
+    selected=$(find ~/git ~/notes ~/ -mindepth 1 -maxdepth 2 -type d | fzf --height 90% --border --preview "bat -n --color=always {}")
 fi
 
 if [[ -z $selected ]]; then

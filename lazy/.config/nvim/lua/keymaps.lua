@@ -23,7 +23,7 @@ map("n", "<leader>wq", ":wq<CR>")
 map("n", "<leader>wqa", ":wqa<CR>")
 
 -- New file
-map("n", "<C-t>", ":ene <BAR> startinsert <CR>")
+--map("n", "<C-t>", ":ene <BAR> startinsert <CR>")
 
 -- window management
 map("n", "<leader>sv", "<C-w>v") -- split window vertically
@@ -46,7 +46,7 @@ map("n", "<leader>sw", ":set wrap!<CR>")
 map("n", "<leader>e", ":NvimTreeToggle<CR>")
 
 -- Oil
-map("n", "-", ":Oil<CR>")
+--map("n", "-", ":Oil<CR>")
 
 -- telescope
 map("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
@@ -59,9 +59,9 @@ map("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help ta
 map("n", "<leader>mp", ":MarkdownPreview<CR>")
 
 -- buffers
-map("n", "<C-n>", ":bn<CR>")
-map("n", "<C-p>", ":bp<CR>")
-map("n", "<C-w>", ":bd<CR>")
+map("n", "<leader>bn", ":bn<CR>")
+map("n", "<leader>bp", ":bp<CR>")
+map("n", "<leader>bc", ":bd<CR>")
 
 -- lazygit
 map("n", "<leader>lg", ":LazyGit<CR>")
