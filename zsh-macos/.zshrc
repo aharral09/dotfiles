@@ -37,10 +37,12 @@ alias scpo='scp -o PreferredAuthentications=password -o PubkeyAuthentication=no 
 alias tl='tmux ls'
 alias tn='tmux new -s'
 alias tk='tmux kill-ses -t'
-alias ta='tmux a -t'
+alias tt='tmux a -t'
+alias ta='tmux a'
 alias td='tmux detach'
 alias ts='tmuxinator start'
 alias tr='tmux source-file ~/.tmux.conf'
+alias si='tmux-sshionizer'
 
 # git
 alias gs='git st'
