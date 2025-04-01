@@ -18,6 +18,9 @@ function y() {
 }
 eval "$(zoxide init zsh)"
 fastfetch
+eval "$(ssh-agent)">/dev/null 2>&1
+ssh-add $HOME/.ssh/dotgit >/dev/null 2>&1
+ssh-add $HOME/.ssh/ansible >/dev/null 2>&1
 
 # normal
 alias ff='fastfetch'
