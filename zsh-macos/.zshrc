@@ -17,6 +17,7 @@ function y() {
 	rm -f -- "$tmp"
 }
 eval "$(zoxide init zsh)"
+fastfetch
 
 # normal
 alias ff='fastfetch'
