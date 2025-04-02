@@ -161,3 +161,4 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Created by `pipx` on 2024-11-06 21:22:03
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
