@@ -46,7 +46,7 @@ map("n", "<leader>sw", ":set wrap!<CR>")
 map("n", "<leader>e", ":NvimTreeToggle<CR>")
 
 -- Oil
---map("n", "-", ":Oil<CR>")
+map("n", "<leader>oo", ":Oil<CR>")
 
 -- telescope
 map("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
