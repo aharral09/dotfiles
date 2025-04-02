@@ -17,7 +17,6 @@ function y() {
 	rm -f -- "$tmp"
 }
 eval "$(zoxide init zsh)"
-fastfetch
 eval "$(ssh-agent)">/dev/null 2>&1
 ssh-add $HOME/.ssh/dotgit >/dev/null 2>&1
 ssh-add $HOME/.ssh/ansible >/dev/null 2>&1
@@ -131,7 +130,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git ssh-agent)
 
 source $ZSH/oh-my-zsh.sh
 
