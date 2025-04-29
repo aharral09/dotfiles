@@ -22,7 +22,7 @@ fi
 # Normalize the host name for session naming
 selected_after_tr=$(echo "$selected_host" | tr '.-' '__')
 echo $selected_after_tr
-# tmux display-message -d 3000 "selected_after_tr = $selected_after_tr"
+tmux display-message -d 3000 "selected_after_tr = $selected_after_tr"
 
 # If a tmux session with the desired name does not already exist, create it in detached mode
 if ! tmux has-session -t=$selected_after_tr 2>/dev/null; then

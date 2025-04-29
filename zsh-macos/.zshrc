@@ -17,9 +17,6 @@ function y() {
 	rm -f -- "$tmp"
 }
 eval "$(zoxide init zsh)"
-eval "$(ssh-agent)">/dev/null 2>&1
-ssh-add $HOME/.ssh/dotgit >/dev/null 2>&1
-ssh-add $HOME/.ssh/ansible >/dev/null 2>&1
 
 # normal
 alias ff='fastfetch'
@@ -39,7 +36,7 @@ alias scpo='scp -o PreferredAuthentications=password -o PubkeyAuthentication=no 
 alias tl='tmux ls'
 alias tn='tmux new -s'
 alias tk='tmux kill-ses -t'
-alias tt='tmux a -t'
+alias tc='tmux a -t'
 alias ta='tmux a'
 alias td='tmux detach'
 alias ts='tmuxinator start'
@@ -159,6 +156,3 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# Created by `pipx` on 2024-11-06 21:22:03
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
