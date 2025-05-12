@@ -1,6 +1,7 @@
 -- Bootstrap lazy.nvim
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+vim.opt.termguicolors = true
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -16,10 +17,10 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
     os.exit(1)
   end
 end
+
 vim.opt.rtp:prepend(lazypath)
 
 require("options")
 require("keymaps")
 require("lazy").setup("plugins")
-vim.opt.termguicolors = true
 require("bufferline").setup{}

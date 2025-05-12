@@ -23,7 +23,7 @@ map("n", "<leader>wq", ":wq<CR>")
 map("n", "<leader>wqa", ":wqa<CR>")
 
 -- New file
---map("n", "<C-t>", ":ene <BAR> startinsert <CR>")
+map("n", "<C-n>", ":ene <BAR> startinsert <CR>")
 
 -- window management
 map("n", "<leader>sv", "<C-w>v") -- split window vertically

@@ -9,8 +9,8 @@ config.window_decorations = "RESIZE"
 config.enable_tab_bar = true
 config.use_fancy_tab_bar = true
 config.hide_tab_bar_if_only_one_tab = true
-config.window_background_opacity = 0.85
-config.macos_window_background_blur = 50
+config.window_background_opacity = 0.90
+config.macos_window_background_blur = 20
 config.adjust_window_size_when_changing_font_size = false
 config.colors = {
   cursor_bg = '#ffffff',
@@ -32,27 +32,7 @@ config.keys = {
   {
     key = 'f',
     mods = 'ALT',
-    action = act.SendString 'tmux-sessionizer\n'
-  },
-  {
-    key = 'h',
-    mods = 'ALT',
-    action = act.ActivatePaneDirection 'Left'
-  },
-  {
-    key = 'j',
-    mods = 'ALT',
-    action = act.ActivatePaneDirection 'Down',
-  },
-  {
-    key = 'k',
-    mods = 'ALT',
-    action = act.ActivatePaneDirection 'Up',
-  },
-  {
-    key = 'l',
-    mods = 'ALT',
-    action = act.ActivatePaneDirection 'Right',
+    action = act.SendString 'sc\n'
   },
 }
 return config

@@ -39,8 +39,8 @@ default-root-container-orientation = 'auto'
 # See https://nikitabobko.github.io/AeroSpace/guide#on-focus-changed-callbacks
 # See https://nikitabobko.github.io/AeroSpace/commands#move-mouse
 # Fallback value (if you omit the key): on-focused-monitor-changed = []
-on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
-on-focus-changed = "move-mouse window-lazy-center"
+#on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
+#on-focus-changed = "move-mouse window-lazy-center"
 
 # You can effectively turn off macOS "Hide application" (cmd-h) feature by toggling this flag
 # Useful if you don't use this macOS feature, but accidentally hit cmd-h or cmd-alt-h key
@@ -62,10 +62,10 @@ preset = 'qwerty'
 [gaps]
 inner.horizontal = 20
 inner.vertical =   20
-outer.left =       20
-outer.bottom =     20
-outer.top =        20
-outer.right =      20
+outer.left =       30
+outer.bottom =     30
+outer.top =        30
+outer.right =      30
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -190,15 +190,18 @@ run = 'layout floating'
 if.app-id = 'com.apple.TextEdit'
 run = 'layout floating'
 
+[[on-window-detected]]
+if.app-id = 'net.freemacsoft.AppCleaner'
+run = 'layout floating'
 
-#[[on-window-detected]]
-#if.app-id='com.microsoft.Excel'
-#run = 'layout floating'
-#
-#[[on-window-detected]]
-#if.app-id='com.microsoft.Word'
-#run = 'layout floating'
-#
+[[on-window-detected]]
+if.app-id='com.microsoft.Excel'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id='com.microsoft.Word'
+run = 'layout floating'
+
 #[[on-window-detected]]
 #if.app-id = 'com.bitwarden.desktop'
 #run = 'layout floating'
@@ -206,20 +209,3 @@ run = 'layout floating'
 [[on-window-detected]]
 if.app-id = 'com.apple.Preview'
 run = 'layout floating'
-
-#[[on-window-detected]]
-#if.app-id = 'com.googlecode.iterm2'
-#run = "move-node-to-workspace T"
-#[[on-window-detected]]
-#if.app-id = 'org.mozilla.firefox'
-#run = "move-node-to-workspace B"
-#[[on-window-detected]]
-#if.app-id = 'com.microsoft.teams2'
-#run = "move-node-to-workspace C"
-#[[on-window-detected]]
-#if.app-id = 'com.microsoft.Outlook'
-#run = "move-node-to-workspace M"
-#[[on-window-detected]]
-#if.app-id = 'com.spotify.client'
-#run = "move-node-to-workspace S"
-
