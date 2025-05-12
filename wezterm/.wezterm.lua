@@ -29,10 +29,5 @@ config.keys = {
     mods = 'ALT',
     action = act.SplitHorizontal { domain = 'CurrentPaneDomain' },
   },
-  {
-    key = 'f',
-    mods = 'ALT',
-    action = act.SendString 'sc\n'
-  },
 }
 return config
