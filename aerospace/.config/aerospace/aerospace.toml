@@ -174,9 +174,6 @@ alt-shift-j = ['join-with down', 'mode main']
 alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
-alt-t = 'exec-and-forget open -a /Applications/Ghostty.app'
-alt-b = 'exec-and-forget open -a /Applications/Firefox.app'
-
 down = 'volume down'
 up = 'volume up'
 shift-down = ['volume set 0', 'mode main']
