@@ -4,14 +4,16 @@ local map = vim.keymap.set
 -- run script
 map("n", "<C-x>", ":!./%<CR>")
 
+-- QOLs
+map("n", ";", ":", { desc = "CMD enter command mode" })
+map("i", "jk", "<ESC>")
+map("i", "jj", "<ESC>")
+map("i", "<C-c>", "<ESC>")
+map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
+
 -- visual line movement
 map("n", "j", "gj")
 map("n", "k", "gk")
-
--- use jj to escape insert mode
-map("i", "jj", "<ESC>")
-map("i", "jk", "<ESC>")
-map("i", "<C-c>", "<ESC>")
 
 -- Save file
 map("i", "<C-s>", ":w<CR>")
@@ -52,16 +54,15 @@ map("n", "<leader>oo", ":Oil<CR>")
 map("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
 map("n", "<leader>fs", "<cmd>Telescope live_grep<cr>") -- find string in current working directory as you type
 map("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string under cursor in current working directory
-map("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- find string under cursor in current working directory
+map("n", "<leader>b", "<cmd>Telescope buffers<cr>") -- find string under cursor in current working directory
 map("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
 
 -- markdown preview
 map("n", "<leader>mp", ":MarkdownPreview<CR>")
 
 -- buffers
-map("n", "<leader>bn", ":bn<CR>")
-map("n", "<leader>bp", ":bp<CR>")
-map("n", "<leader>bc", ":bd<CR>")
+map("n", "<C-]>", ":bnext<CR>")
+map("n", "<C-[>", ":bprev<CR>")
 
 -- lazygit
 map("n", "<leader>lg", ":LazyGit<CR>")

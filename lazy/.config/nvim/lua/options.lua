@@ -5,15 +5,14 @@ opt.relativenumber = true
 opt.number = true
 
 -- tabs & indentation
-opt.tabstop = 2
-opt.shiftwidth = 2
+opt.tabstop = 4
+opt.shiftwidth = 4
 opt.expandtab = true
 opt.autoindent = true
 opt.smartindent = true
 opt.linebreak = true
 opt.showbreak = "↪ "
 opt.swapfile = false
---opt.conceallevel = 2
 
 -- line wrapping
 opt.wrap = true

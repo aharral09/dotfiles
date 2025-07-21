@@ -15,7 +15,7 @@ after-login-command = []
 #]
 
 # Start AeroSpace at login
-start-at-login = false
+start-at-login = true
 
 # Normalizations. See: https://nikitabobko.github.io/AeroSpace/guide#normalization
 enable-normalization-flatten-containers = true
@@ -39,8 +39,8 @@ default-root-container-orientation = 'auto'
 # See https://nikitabobko.github.io/AeroSpace/guide#on-focus-changed-callbacks
 # See https://nikitabobko.github.io/AeroSpace/commands#move-mouse
 # Fallback value (if you omit the key): on-focused-monitor-changed = []
-#on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
-#on-focus-changed = "move-mouse window-lazy-center"
+on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
+on-focus-changed = "move-mouse window-lazy-center"
 
 # You can effectively turn off macOS "Hide application" (cmd-h) feature by toggling this flag
 # Useful if you don't use this macOS feature, but accidentally hit cmd-h or cmd-alt-h key
@@ -62,10 +62,10 @@ preset = 'qwerty'
 [gaps]
 inner.horizontal = 20
 inner.vertical =   20
-outer.left =       30
-outer.bottom =     30
-outer.top =        30
-outer.right =      30
+outer.left =       20
+outer.bottom =     20
+outer.top =        20
+outer.right =      20
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -117,8 +117,8 @@ alt-shift-k = 'move up'
 alt-shift-l = 'move right'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#resize
-alt-shift-minus = 'resize smart -50'
-alt-shift-equal = 'resize smart +50'
+alt-shift-minus = 'resize smart -100'
+alt-shift-equal = 'resize smart +100'
 
 alt-1 = 'workspace 1'
 alt-2 = 'workspace 2'
@@ -174,6 +174,9 @@ alt-shift-j = ['join-with down', 'mode main']
 alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
+alt-t = 'exec-and-forget open -a /Applications/Ghostty.app'
+alt-b = 'exec-and-forget open -a /Applications/Firefox.app'
+
 down = 'volume down'
 up = 'volume up'
 shift-down = ['volume set 0', 'mode main']
@@ -184,28 +187,4 @@ run = 'layout floating'
 
 [[on-window-detected]]
 if.app-id = 'net.pulsesecure.Pulse-Secure'
-run = 'layout floating'
-
-[[on-window-detected]]
-if.app-id = 'com.apple.TextEdit'
-run = 'layout floating'
-
-[[on-window-detected]]
-if.app-id = 'net.freemacsoft.AppCleaner'
-run = 'layout floating'
-
-[[on-window-detected]]
-if.app-id='com.microsoft.Excel'
-run = 'layout floating'
-
-[[on-window-detected]]
-if.app-id='com.microsoft.Word'
-run = 'layout floating'
-
-#[[on-window-detected]]
-#if.app-id = 'com.bitwarden.desktop'
-#run = 'layout floating'
-
-[[on-window-detected]]
-if.app-id = 'com.apple.Preview'
 run = 'layout floating'
