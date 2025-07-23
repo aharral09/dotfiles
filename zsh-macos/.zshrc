@@ -25,6 +25,12 @@ export PATH="$PATH:/Users/aharral/.config/emacs/bin"
 #  aerospace list-windows --all | fzf --bind 'enter:execute(bash -c "aerospace focus --window-id {1}")+abort'
 #}
 
+# Startup time
+timezsh() {
+  shell=${1-$SHELL}
+  for i in $(seq 1 10); do /usr/bin/time $shell -i -c exit; done
+}
+
 # jira
 alias mytickets='acli jira workitem search --jql "assignee = currentUser() AND status NOT IN (Closed, Resolved, Done)"'
 # normal

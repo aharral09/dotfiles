@@ -1,4 +1,8 @@
-name:  
+name: 
 root: ~/
 windows:
-  - home: fastfetch
+  -  home: fastfetch
+  - 󰊢 git: cd ~/git/
+  - 󰒋 hpc:
+  -  isi:
+  - 󱐋 misc:
