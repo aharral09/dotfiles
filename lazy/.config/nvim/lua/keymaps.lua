@@ -54,7 +54,9 @@ map("n", "<leader>oo", ":Oil<CR>")
 map("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
 map("n", "<leader>fs", "<cmd>Telescope live_grep<cr>") -- find string in current working directory as you type
 map("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string under cursor in current working directory
-map("n", "<leader>b", "<cmd>Telescope buffers<cr>") -- find string under cursor in current working directory
+map("n", "<leader>bl", "<cmd>Telescope buffers<cr>") -- find string under cursor in current working directory
+map("n", "<leader>bn", "<cmd>bn<cr>") -- find string under cursor in current working directory
+map("n", "<leader>bp", "<cmd>bp<cr>") -- find string under cursor in current working directory
 map("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
 
 -- markdown preview

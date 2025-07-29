@@ -199,7 +199,7 @@ if.app-id = 'com.obsproject.obs-studio'
 run = 'layout floating'
 
 # Spotify
-[[on-window-detected]]
-if.app-id = 'com.spotify.client'
-run = 'layout floating'
+#[[on-window-detected]]
+#if.app-id = 'com.spotify.client'
+#run = 'layout floating'
 
