@@ -1,8 +1,8 @@
 name: home
 root: ~/
 windows:
-  -   home:
-  -  notes:
+  -  home:
+  -  notes: cd ~/notes/
   - 󰒋 hpc:
   -  isi:
   - 󱐋 misc:

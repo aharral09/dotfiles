@@ -15,16 +15,12 @@ map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 map("n", "j", "gj")
 map("n", "k", "gk")
 
--- Save file
-map("i", "<C-s>", ":w<CR>")
-map("n", "<C-s>", ":w<CR>")
+-- File operations
 map("n", "<leader>w", ":w<CR>")
 map("n", "<leader>q", ":q<CR>")
 map("n", "<leader>qa", ":qa!<CR>")
 map("n", "<leader>wq", ":wq<CR>")
 map("n", "<leader>wqa", ":wqa<CR>")
-
--- New file
 map("n", "<C-n>", ":ene <BAR> startinsert <CR>")
 
 -- window management
@@ -63,8 +59,8 @@ map("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help ta
 map("n", "<leader>mp", ":MarkdownPreview<CR>")
 
 -- buffers
-map("n", "<C-]>", ":bnext<CR>")
-map("n", "<C-[>", ":bprev<CR>")
+--map("n", "<C-]>", ":bnext<CR>")
+--map("n", "<C-[>", ":bprev<CR>")
 
 -- lazygit
 map("n", "<leader>lg", ":LazyGit<CR>")
