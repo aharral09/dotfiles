@@ -198,6 +198,10 @@ run = 'layout floating'
 if.app-id = 'com.obsproject.obs-studio'
 run = 'layout floating'
 
+[[on-window-detected]]
+if.app-id = 'com.microsoft.rdc.macos'
+run = 'layout floating'
+
 # Spotify
 #[[on-window-detected]]
 #if.app-id = 'com.spotify.client'
