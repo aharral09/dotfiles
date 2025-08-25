@@ -7,6 +7,7 @@ export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
 export PATH="$PATH:/Users/aharral/.local/bin"
 export PATH="$PATH:/Users/aharral/dotfiles/.bin"
 export PATH="$PATH:/opt/homebrew/bin"
+export PATH="$PATH:/Users/aharral/.local/share/bob/nvim-bin"
 export EDITOR=nvim
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -36,10 +37,9 @@ alias mytickets='acli jira workitem search --jql "assignee = currentUser() AND s
 # normal
 alias cl='clear'
 alias ff='fastfetch'
-alias nv='bob run nightly'
-alias vi='bob run nightly'
-alias v='bob run nightly'
-alias nf='bob run nightly $(fzf --height 80% --layout reverse --border --preview "bat -n --color=always {}")'
+alias nv='nvim'
+alias vi='vim'
+alias nf='nvim $(fzf --height 80% --layout reverse --border --preview "bat -n --color=always {}")'
 alias sc='sesh connect "$(sesh list | fzf --preview "bat -n --color=always {}")"'
 alias reload='source ~/.zshrc'
 alias deploy='cd ~/git/hpcwebsite/ && mkdocs gh-deploy'
