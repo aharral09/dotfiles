@@ -1,15 +1,12 @@
 vim.g.mapleader = " "
 local map = vim.keymap.set
 
--- run script
-map("n", "<C-x>", ":!./%<CR>")
-
 -- QOLs
 map("n", ";", ":", { desc = "CMD enter command mode" })
-map("i", "jk", "<ESC>")
 map("i", "jj", "<ESC>")
-map("i", "<C-c>", "<ESC>")
-map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
+map({ "n", "i", "v" }, "<C-s>", ":w<CR>")
+map({"n","v","x"}, "<leader>r", ":update<CR> :source<CR>")
+map('n', '<leader>lf', vim.lsp.buf.format)
 
 -- visual line movement
 map("n", "j", "gj")
@@ -18,18 +15,7 @@ map("n", "k", "gk")
 -- File operations
 map("n", "<leader>w", ":w<CR>")
 map("n", "<leader>q", ":q<CR>")
-map("n", "<leader>qa", ":qa!<CR>")
-map("n", "<leader>wq", ":wq<CR>")
-map("n", "<leader>wqa", ":wqa<CR>")
 map("n", "<C-n>", ":ene <BAR> startinsert <CR>")
-
--- window management
-map("n", "<leader>sv", "<C-w>v") -- split window vertically
-map("n", "<leader>sh", "<C-w>s") -- split window horizontally
-map("n", "<leader>se", "<C-w>=") -- make split windows equal width & height
-
--- set spelling
-map("n", "<leader>sp", ":set spell!<CR>")
 
 -- window navigation
 map("n", "<C-h>", "<C-w>h")
@@ -37,30 +23,25 @@ map("n", "<C-j>", "<C-w>j")
 map("n", "<C-k>", "<C-w>k")
 map("n", "<C-l>", "<C-w>l")
 
--- toggle wrap
-map("n", "<leader>sw", ":set wrap!<CR>")
-
 -- Neotree
 map("n", "<leader>e", ":NvimTreeToggle<CR>")
 
 -- Oil
-map("n", "<leader>oo", ":Oil<CR>")
+map("n", "<leader>o", ":Oil<CR>")
 
--- telescope
-map("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
-map("n", "<leader>fs", "<cmd>Telescope live_grep<cr>") -- find string in current working directory as you type
-map("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string under cursor in current working directory
-map("n", "<leader>bl", "<cmd>Telescope buffers<cr>") -- find string under cursor in current working directory
-map("n", "<leader>bn", "<cmd>bn<cr>") -- find string under cursor in current working directory
-map("n", "<leader>bp", "<cmd>bp<cr>") -- find string under cursor in current working directory
-map("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
+-- Telescope
+map("n", "<leader>f", ":Telescope find_files<CR>") -- find files within current working directory, respects .gitignore
+map("n", "<leader>s", ":Telescope live_grep<CR>") -- find string in current working directory as you type
+map("n", "<leader>c", ":Telescope grep_string<CR>") -- find string under cursor in current working directory
+map("n", "<leader>b", ":Telescope buffers<CR>") -- find string under cursor in current working directory
+map("n", "<leader>h", ":Telescope help_tags<CR>") -- list available help tags
+
+-- Buffers
+map("n", "<leader>bn", ":bn<CR>")
+map("n", "<leader>bp", ":bp<CR>")
 
 -- markdown preview
 map("n", "<leader>mp", ":MarkdownPreview<CR>")
-
--- buffers
---map("n", "<C-]>", ":bnext<CR>")
---map("n", "<C-[>", ":bprev<CR>")
 
 -- lazygit
 map("n", "<leader>lg", ":LazyGit<CR>")

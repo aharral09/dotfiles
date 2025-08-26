@@ -1,0 +1,6 @@
+name: notes
+root: ~/notes
+windows:
+  - term: ff
+  - todo: nv todo.md
+  - scratch: nv scratch.md

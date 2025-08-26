@@ -1,0 +1,6 @@
+name: hpc
+root: ~/
+windows:
+  - notes: cd ~/notes/hpc && nv
+  - prod: ssh wi-hpc
+  - dev: ssh wi-hpc-dev

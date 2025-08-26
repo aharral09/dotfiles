@@ -1,0 +1,6 @@
+name: isi
+root: ~/
+windows:
+  - notes: cd ~/notes/isi && nv
+  - prod: ssh isi
+  - dr: ssh isi-dr
