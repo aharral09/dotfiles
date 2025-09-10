@@ -6,7 +6,7 @@ return {
       require("mason-lspconfig").setup()
     end,
     opts = {
-      ensure_installed = { "lua_ls", "ansiblels", "bashls", "dockerls", "marksman", "clangd", "jedi_language_server" },
+      ensure_installed = { "lua_ls", "ansiblels", "bashls", "dockerls", "marksman", "clangd", "jedi_language_server", "python_lsp_server" },
       auto_install = true,
     },
   },
@@ -29,6 +29,9 @@ return {
       })
       -- python
       lspconfig.jedi_language_server.setup({
+        capabilities = capabilities
+      })
+      lspconfig.pylsp.setup({
         capabilities = capabilities
       })
       -- C

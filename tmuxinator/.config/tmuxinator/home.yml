@@ -2,6 +2,7 @@ name: 
 root: ~/
 windows:
   -  home:
+  -  dev: cd ~/dev
   - 󰒋 hpc:
   -  isi:
   - 󱐋 misc:

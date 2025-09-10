@@ -7,7 +7,6 @@ export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
 export PATH="$PATH:/Users/aharral/.local/bin"
 export PATH="$PATH:/Users/aharral/dotfiles/.bin"
 export PATH="$PATH:/opt/homebrew/bin"
-#export PATH="$PATH:/Users/aharral/.local/share/bob/nvim-bin"
 export EDITOR=nvim
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -22,27 +21,21 @@ eval "$(zoxide init zsh)"
 # Add Doom Emacs to path
 export PATH="$PATH:/Users/aharral/.config/emacs/bin"
 
-#function ff() {
-#  aerospace list-windows --all | fzf --bind 'enter:execute(bash -c "aerospace focus --window-id {1}")+abort'
-#}
-
 # Startup time
 timezsh() {
   shell=${1-$SHELL}
   for i in $(seq 1 10); do /usr/bin/time $shell -i -c exit; done
 }
 
-# jira
-alias mytickets='acli jira workitem search --jql "assignee = currentUser() AND status NOT IN (Closed, Resolved, Done)"'
 # normal
-alias cl='clear'
+alias reload='source ~/.zshrc'
+alias cls='clear'
 alias ff='fastfetch'
 alias nv='nvim'
 alias vi='nvim'
 alias nf='nvim $(fzf --height 80% --layout reverse --border --preview "bat -n --color=always {}")'
 alias sc='sesh connect "$(sesh list | fzf --preview "bat -n --color=always {}")"'
-alias reload='source ~/.zshrc'
-alias deploy='cd ~/git/hpcwebsite/ && mkdocs gh-deploy'
+alias deploy='cd ~/dev/hpcwebsite/ && mkdocs gh-deploy'
 alias ssho='ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no -o PasswordAuthentication=yes'
 alias scpo='scp -o PreferredAuthentications=password -o PubkeyAuthentication=no -o PasswordAuthentication=yes'
 alias cleands='find . -name ".DS_Store" -exec rm {} \;'
@@ -142,7 +135,8 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(zsh-eza git ssh-agent)
+#plugins=(zsh-eza git ssh-agent)
+plugins=(git ssh-agent)
 
 source $ZSH/oh-my-zsh.sh
 
