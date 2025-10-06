@@ -65,6 +65,9 @@ alias lg='lazygit'
 alias ap='ansible-playbook'
 alias al='ansible-lint'
 
+# jira
+alias ju='jiratui ui'
+
 # Auto-suggestions
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
