@@ -8,6 +8,10 @@ map({ "n", "i", "v" }, "<C-s>", ":w<CR>")
 map({ "n", "v", "x" }, "<leader>r", ":update<CR> :source<CR>")
 map('n', '<leader>lf', vim.lsp.buf.format)
 
+-- Save and Quite
+map("n", "<leader>w", ":w<CR>")
+map("n", "<leader>q", ":q<CR>")
+
 -- visual line movement
 map("n", "j", "gj")
 map("n", "k", "gk")

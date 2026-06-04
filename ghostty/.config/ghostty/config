@@ -6,3 +6,12 @@ font-size = 16
 shell-integration-features = no-cursor
 cursor-style = block
 shell-integration = zsh
+confirm-close-surface = false
+keybind = alt+r=reload_config
+keybind = alt+\=new_split:right
+keybind = alt+-=new_split:down
+keybind = alt+h=goto_split:left
+keybind = alt+j=goto_split:down
+keybind = alt+k=goto_split:up
+keybind = alt+l=goto_split:right
+keybind = alt+d=close_surface

@@ -1,6 +1,6 @@
 name: hpc
 root: ~/
 windows:
-  - notes: cd ~/notes/hpc && nv
-  - prod: ssh wi-hpc
+  - prd: ssh wi-hpc
   - dev: ssh wi-hpc-dev
+  - docs: cd ~/git/hpcwebsite && nvim
