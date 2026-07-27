@@ -14,7 +14,7 @@ o.ignorecase = true
 o.smartcase = true
 o.cursorline = true
 o.termguicolors = true
-o.background = "dark"
+o.background = "light"
 o.signcolumn = "yes"
 o.backspace = "indent,eol,start"
 o.clipboard:append("unnamedplus")

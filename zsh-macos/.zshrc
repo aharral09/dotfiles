@@ -70,6 +70,10 @@ alias al='ansible-lint'
 
 # jira
 alias jira='jiratui ui'
+alias my-open-tickets='jiratui ui --jql-expression-id 1 --search-on-startup'
+alias all-my-tickets='jiratui ui --jql-expression-id 2 --search-on-startup'
+alias my-active-changes='jiratui ui --jql-expression-id 3 --search-on-startup'
+alias my-tasks='jiratui ui --jql-expression-id 4 --search-on-startup'
 export JIRA_TUI_CONFIG_FILE="$HOME/.config/jiratui/config.yml"
 
 # Auto-suggestions

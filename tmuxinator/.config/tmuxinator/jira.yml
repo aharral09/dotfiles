@@ -1,13 +1,12 @@
 # ~/.config/tmuxinator/home.yml
 
-name: 
+name: jira
 root: ~/
 windows:
-  -  home: fastfetch
-  - 󱓧 notes: cd ~/notes && nf
-  - 󰒋 hpc: ssh wi-hpc
-  -  isi: ssh isi
-  - 󱐋 misc: fastfetch
+  - my open tickets: jiratui ui --jql-expression-id 1 --search-on-startup
+  - my active changes: jiratui ui --jql-expression-id 3 --search-on-startup
+  - my tasks: jiratui ui --jql-expression-id 4 --search-on-startup
+  - all open tickets: jiratui ui --jql-expression-id 5 --search-on-startup
 
 # Optional tmux socket
 # socket_name: foo

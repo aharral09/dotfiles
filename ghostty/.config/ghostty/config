@@ -1,17 +1,13 @@
 term = xterm-256color
-theme = Dark+
+#theme = Apple System Colors Light
+theme = Catppuccin Latte
+
 font-family = "ComicShannsMono Nerd Font"
 font-thicken = false
 font-size = 16
+mouse-hide-while-typing = true
 shell-integration-features = no-cursor
 cursor-style = block
 shell-integration = zsh
+window-save-state = always
 confirm-close-surface = false
-keybind = alt+r=reload_config
-keybind = alt+\=new_split:right
-keybind = alt+-=new_split:down
-keybind = alt+h=goto_split:left
-keybind = alt+j=goto_split:down
-keybind = alt+k=goto_split:up
-keybind = alt+l=goto_split:right
-keybind = alt+d=close_surface
