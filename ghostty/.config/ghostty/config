@@ -1,10 +1,8 @@
 term = xterm-256color
-theme = Catppuccin Latte
-
-font-family = "ComicShannsMono Nerd Font"
+theme = Dark+
+font-family = "JetBrainsMono Nerd Font"
 font-thicken = false
-font-size = 16
-mouse-hide-while-typing = true
+font-size = 15
 shell-integration-features = no-cursor
 cursor-style = block
 shell-integration = zsh
