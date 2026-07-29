@@ -1,5 +1,0 @@
-name: isi
-root: ~/
-windows:
-  - prod: ssh isi
-  - dr: ssh isi-dr

@@ -1,6 +1,0 @@
-name: hpc
-root: ~/
-windows:
-  - prd: ssh wi-hpc
-  - dev: ssh wi-hpc-dev
-  - docs: cd ~/git/hpcwebsite && nvim
