@@ -1,5 +1,4 @@
 term = xterm-256color
-#theme = Apple System Colors Light
 theme = Catppuccin Latte
 
 font-family = "ComicShannsMono Nerd Font"
